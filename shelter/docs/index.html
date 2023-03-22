@@ -8,14 +8,145 @@
     <title>Main</title>
   </head>
   <body> 
-    <h1>header</h1>
-    <h2>hero</h2>
-    <h2>about</h2>
-    <h2>our friends</h2>
-    <h2>help</h2>
-    <h2>in addition</h2>
-    <footer> 
-      <h2>footer</h2>
+    <header class="header"> 
+      <div class="header__logo"> 
+        <div class="logo"> 
+          <p class="logo__title">Cozy House </p>
+          <p class="logo__subtitle">Shelter for pets in Boston</p>
+        </div>
+      </div>
+      <nav class="header__nav"> 
+        <ul class="main-menu"> 
+          <li class="main-menu__item main-menu__item--current"> <span class="main-menu__link">About the shelter</span></li>
+          <li class="main-menu__item"> <a class="main-menu__link" href="#">Our pets </a></li>
+          <li class="main-menu__item"> <a class="main-menu__link" href="#">Help the shelter</a></li>
+          <li class="main-menu__item"> <a class="main-menu__link" href="#">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero"> 
+      <div class="hero__caption"> 
+        <h1 class="hero__title">Not only people need a house</h1>
+        <p class="hero__subtitle">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p><a class="button" href="#">Make a friend</a>
+      </div>
+    </section>
+    <section class="about"> 
+      <div class="about__content"> 
+        <h2 class="section-title">About the shelter “Cozy House”</h2>
+        <p class="section-text">Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family. The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.</p>
+        <p class="section-text">We feed our wards with the best food and make sure that they do not get sick, feel comfortable (including psychologically) and well. We are supported by 87 volunteers and 28 employees of various skill levels. About 12% of the animals are taken by the shelter staff. Taking care of the animals, they become attached to the pets and would hardly ever leave them alone.</p>
+      </div>
+      <div class="about__image"> </div>
+    </section>
+    <section class="our-friends">
+      <header class="our-friends__header">
+        <h2 class="section-title">Our friends who are looking for a house</h2>
+      </header>
+      <div class="our-friends__content"> 
+        <div class="pet-slider">
+          <div class="pet-slider__content"> 
+            <article class="pet"> 
+              <div class="pet__image"> <img src="./img/pets/" alt=""></div>
+              <h3 class="pet__title">Katrine</h3><a class="ghost-button" href="#">Learn more</a>
+            </article>
+            <article class="pet"> 
+              <div class="pet__image"> <img src="./img/pets/" alt=""></div>
+              <h3 class="pet__title">Jennifer</h3><a class="ghost-button" href="#">Learn more</a>
+            </article>
+            <article class="pet"> 
+              <div class="pet__image"> <img src="./img/pets/" alt=""></div>
+              <h3 class="pet__title">Woody</h3><a class="ghost-button" href="#">Learn more</a>
+            </article>
+          </div>
+          <div class="pet-slider__controls"></div>
+        </div>
+        <div class="our-friends__cta"><a class="button" href="#">Get to know the rest</a></div>
+      </div>
+    </section>
+    <section class="help"> 
+      <header class="help__header">
+        <h2 class="section__title">How you can help our shelter</h2>
+      </header>
+      <div class="help__content"> 
+        <ul class="help-list"> 
+          <li class="help-list__item"> 
+            <div class="help-list__icon"> <img src="" alt=""></div>
+            <h3 class="help-list__title">Pet food</h3>
+          </li>
+          <li class="help-list__item"> 
+            <div class="help-list__icon"> <img src="" alt=""></div>
+            <h3 class="help-list__title">Transportation</h3>
+          </li>
+          <li class="help-list__item"> 
+            <div class="help-list__icon"> <img src="" alt=""></div>
+            <h3 class="help-list__title">Toys</h3>
+          </li>
+          <li class="help-list__item"> 
+            <div class="help-list__icon"> <img src="" alt=""></div>
+            <h3 class="help-list__title">Bowls and cups</h3>
+          </li>
+          <li class="help-list__item"> 
+            <div class="help-list__icon"> <img src="" alt=""></div>
+            <h3 class="help-list__title">Shampoos</h3>
+          </li>
+          <li class="help-list__item"> 
+            <div class="help-list__icon"> <img src="" alt=""></div>
+            <h3 class="help-list__title">Vitamins</h3>
+          </li>
+          <li class="help-list__item"> 
+            <div class="help-list__icon"> <img src="" alt=""></div>
+            <h3 class="help-list__title">Medicines</h3>
+          </li>
+          <li class="help-list__item"> 
+            <div class="help-list__icon"> <img src="" alt=""></div>
+            <h3 class="help-list__title">Collars / leashes</h3>
+          </li>
+          <li class="help-list__item"> 
+            <div class="help-list__icon"> <img src="" alt=""></div>
+            <h3 class="help-list__title">Sleeping areas</h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="donations">
+      <div class="donations__wrapper">
+        <div class="donations__content"> 
+          <h2 class="section-title">You can also make a donation</h2>
+          <h3 class="donations__title">Name of the bank / Type of bank account</h3>
+          <div class="credit-card">8380 2880 8028 8791 7435</div>
+          <p class="donations__legal-info">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+        </div>
+        <div class="donations__image"> <img src="" alt=""></div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__wrapper wrapper"> 
+        <div class="footer__block">
+          <h3 class="footer-title">For questions and suggestions</h3>
+          <div class="contact"> 
+            <div class="contact__icon"> <img src="" alt=""></div>
+            <p class="contact__text">email@shelter.com</p>
+          </div>
+          <div class="contact"> 
+            <div class="contact__icon"> <img src="" alt=""></div>
+            <p class="contact__text">+13 674 567 75 54</p>
+          </div>
+        </div>
+        <div class="footer__block">
+          <h3 class="footer-title">We are waiting for your visit</h3>
+          <div class="contact"> 
+            <div class="contact__icon"> <img src="" alt=""></div>
+            <p class="contact__text">1 Central Street, Boston (entrance from the store)</p>
+          </div>
+          <div class="contact"> 
+            <div class="contact__icon"> <img src="" alt=""></div>
+            <p class="contact__text">18 South Park, London </p>
+          </div>
+        </div>
+        <div class="footer__block">
+          <div class="footer__image"> <img src="" alt=""></div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
