@@ -1,0 +1,82 @@
+html {
+  // positioning
+  position: relative;
+
+  // box model
+  height: 100%;
+
+  // typography
+  // color: $dark;
+  font-family: var(--mainFont);
+  font-size: 4.75vw;
+
+  // visual
+  background-color: var(--lightXL);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  @include atTablet {
+    // typography
+    font-size: 3vw;
+  }
+
+  @include atDesktopS {
+    // typography
+    font-size: 10px;
+  }
+
+  // @include atDesktopM {
+  //   // typography
+  //   font-size: 16px;
+  // }
+
+  // @include atDesktopL {
+  //   // typography
+  //   font-size: 18px;
+  // }
+}
+
+body {
+  // positioning
+  position: relative;
+
+  // visual
+  overflow-x: hidden;
+}
+
+// .centered {
+//   // typography
+//   text-align: center;
+// }
+
+// .nowrap {
+//   // typography
+//   white-space: nowrap;
+// }
+
+// .mobile-only {
+//   @include atDesktopS {
+//     // box model
+//     display: none !important;
+//   }
+// }
+
+// .desktop-only {
+//   // box model
+//   display: none !important;
+
+//   @include atDesktopS {
+//     // box model
+//     display: inherit !important;
+//   }
+// }
+
+// .overflow-hidden {
+//   // visual
+//   overflow: hidden;
+// }
+
+// a {
+//   // typography
+//   // color: $lightGreen;
+// }
