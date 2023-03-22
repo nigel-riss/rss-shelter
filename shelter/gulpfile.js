@@ -28,6 +28,7 @@ const dirs = {
   // Resources
   images:           `./src/img/**/*`,
   favicon:          `./src/favicon/**/*`,
+  fonts:            `./src/fonts/**/*`,
 
   // Distribution
   public:           `./docs`,
@@ -74,6 +75,7 @@ const copyAssets = () => gulp
   .src([
     dirs.images,
     dirs.favicon,
+    dirs.fonts,
   ], {
     base: `src`,
   })
@@ -98,6 +100,7 @@ export const watch = () => {
   gulp.watch([
     dirs.images,
     dirs.favicon,
+    dirs.fonts,
   ], copyAssets)
 }
 
