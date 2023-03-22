@@ -63,6 +63,7 @@ const renderPug = () => gulp
   }))
   .on(`error`, (err) => {
     console.log("\x1b[31m", err.message, "\x1b[0m")
+    this.emit(`end`)
   })
   .pipe(gulp.dest(dirs.public))
   .pipe(server.stream())
