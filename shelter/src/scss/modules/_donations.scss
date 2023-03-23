@@ -1,0 +1,38 @@
+.donations {
+  // box model
+  padding: 4.2rem 1rem;
+
+  // visual
+  background-color: var(--lightL);
+}
+
+.donations__content {
+  // box model
+  padding: 0 1rem;
+}
+
+.donations__title {
+  // box model
+  margin: 2rem 0;
+
+  // typography
+  color: var(--darkL);
+  font-family: var(--titleFont);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.donations__legal-info {
+  // box model
+  margin: 0;
+  margin-top: 2rem;
+
+  // typography
+  color: var(--darkM);
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: justify;
+}

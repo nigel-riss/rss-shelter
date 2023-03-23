@@ -1,0 +1,24 @@
+.credit-card {
+  // box model
+  display: flex;
+  padding: 1rem 1.5rem;
+
+  // border
+  border-radius: 0.9rem;
+
+  // visual
+  background-color: var(--primary);
+}
+
+.credit-card__icon {
+
+}
+
+.credit-card__number {
+  // typography
+  color: var(--darkL);
+  font-family: var(--titleFont);
+  font-size: 1.5rem;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+}

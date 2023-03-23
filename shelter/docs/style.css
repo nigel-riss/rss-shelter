@@ -445,6 +445,7 @@ body {
 
 .button {
   display: flex;
+  justify-content: center;
   padding: 1.5rem 4.5rem;
   border-radius: 10rem;
   color: var(--dark3XL);
@@ -454,4 +455,87 @@ body {
   line-height: 1.3;
   text-decoration: none;
   background-color: var(--primary);
+}
+
+.about {
+  padding: 4.2rem 1rem;
+}
+
+.about__content {
+  padding: 0 1.5rem;
+}
+
+.section-title {
+  margin: 0;
+  color: var(--darkL);
+  font-family: var(--titleFont);
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.section-text {
+  margin: 0;
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.our-friends {
+  padding: 4.2rem 1rem;
+  background-color: var(--lightL);
+}
+
+.help {
+  padding: 4.2rem 1.5rem;
+}
+
+.help__header {
+  margin-bottom: 4.2rem;
+}
+
+.donations {
+  padding: 4.2rem 1rem;
+  background-color: var(--lightL);
+}
+
+.donations__content {
+  padding: 0 1rem;
+}
+
+.donations__title {
+  margin: 2rem 0;
+  color: var(--darkL);
+  font-family: var(--titleFont);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.donations__legal-info {
+  margin: 0;
+  margin-top: 2rem;
+  color: var(--darkM);
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.credit-card {
+  display: flex;
+  padding: 1rem 1.5rem;
+  border-radius: 0.9rem;
+  background-color: var(--primary);
+}
+
+.credit-card__number {
+  color: var(--darkL);
+  font-family: var(--titleFont);
+  font-size: 1.5rem;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
 }
