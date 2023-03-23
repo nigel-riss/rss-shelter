@@ -8,22 +8,22 @@ html {
   // typography
   // color: $dark;
   font-family: var(--mainFont);
-  font-size: 4.75vw;
+  font-size: 10px;
 
   // visual
   background-color: var(--lightXL);
   overflow-x: hidden;
   scroll-behavior: smooth;
 
-  @include atTablet {
-    // typography
-    font-size: 3vw;
-  }
+  // @include atTablet {
+  //   // typography
+  //   font-size: 3vw;
+  // }
 
-  @include atDesktopS {
-    // typography
-    font-size: 10px;
-  }
+  // @include atDesktopS {
+  //   // typography
+  //   font-size: 10px;
+  // }
 
   // @include atDesktopM {
   //   // typography

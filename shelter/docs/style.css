@@ -327,20 +327,10 @@ html {
   position: relative;
   height: 100%;
   font-family: var(--mainFont);
-  font-size: 4.75vw;
+  font-size: 10px;
   background-color: var(--lightXL);
   overflow-x: hidden;
   scroll-behavior: smooth;
-}
-@media (min-width: 600px) {
-  html {
-    font-size: 3vw;
-  }
-}
-@media (min-width: 1000px) {
-  html {
-    font-size: 10px;
-  }
 }
 
 body {
