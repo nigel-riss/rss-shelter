@@ -539,3 +539,47 @@ body {
   letter-spacing: 0.06em;
   line-height: 1.1;
 }
+
+.footer {
+  padding: 0 1rem;
+  padding-top: 3rem;
+  background-color: var(--dark3XL);
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.footer__block {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.footer-title {
+  margin: 0;
+  color: var(--lightXL);
+  font-family: var(--titleFont);
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__text {
+  margin: 0;
+  color: var(--primary);
+  font-family: var(--titleFont);
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+}

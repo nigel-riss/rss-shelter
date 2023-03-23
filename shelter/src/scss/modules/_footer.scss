@@ -1,0 +1,22 @@
+.footer {
+  // box model
+  padding: 0 1rem;
+  padding-top: 3rem;
+
+  // visual
+  background-color: var(--dark3XL);
+}
+
+.footer__wrapper {
+  // box model
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.footer__block {
+  // box model
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}

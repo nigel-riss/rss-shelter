@@ -1,0 +1,26 @@
+.contact {
+  // box model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__icon {
+
+}
+
+.contact__icon img {
+
+}
+
+.contact__text {
+  // box model
+  margin: 0;
+
+  // typography
+  color: var(--primary);
+  font-family: var(--titleFont);
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+}
