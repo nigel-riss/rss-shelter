@@ -1,0 +1,17 @@
+.header {
+  // box model
+  margin-bottom: -15rem;
+  padding: 0 1rem;
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+}
+
+.header__logo {
+  // box model
+  display: flex;
+}
+
+.header__nav {
+  // box model
+  display: none;
+}

@@ -1,0 +1,23 @@
+.button {
+  // box model
+  display: flex;
+  padding: 1.5rem 4.5rem;
+
+  // border
+  border-radius: 10rem;
+
+  // typography
+  color: var(--dark3XL);
+  font-family: var(--titleFont);
+  font-size: 1.7rem;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+  text-decoration: none;
+
+  // visual
+  background-color: var(--primary);
+}
+
+.button:hover {
+
+}

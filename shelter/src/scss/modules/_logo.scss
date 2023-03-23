@@ -1,0 +1,29 @@
+.logo {
+  // typography
+  text-align: center;
+}
+
+.logo__title {
+  // box model
+  margin: 0;
+  margin-bottom: 1rem;
+
+  // typography
+  color: var(--primary);
+  font-family: var(--titleFont);
+  font-size: 3.2rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+}
+
+.logo__subtitle {
+  // box model
+  margin: 0;
+
+  // typography
+  color: var(--lightXL);
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  line-height: 1rem;
+}
