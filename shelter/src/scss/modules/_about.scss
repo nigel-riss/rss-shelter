@@ -9,6 +9,19 @@
 
 .about__content {
   // box model
+  margin-bottom: 4.2rem;
   padding: 0 1.5rem;
 }
 
+.about__image {
+  // box model
+  margin: 0 2rem;
+
+  // typography
+  font-size: 0;
+}
+
+.about__image img {
+  // box model
+  max-width: 100%;
+}
