@@ -1,0 +1,40 @@
+.pet {
+  // box model
+  width: 27rem;
+
+  // border
+  border-radius: 0.9rem;
+
+  // visual
+  background-color: var(--lightS);
+  overflow: hidden;
+}
+
+.pet__image {
+  // typography
+  font-size: 0;
+}
+
+.pet__image img {
+  // box model
+  width: 100%;
+}
+
+.pet__caption {
+  // box model
+  padding: 3rem;
+}
+
+.pet__title {
+  // box model
+  margin: 0;
+  margin-bottom: 3rem;
+
+  // typography
+  color: var(--darkL);
+  font-family: var(--titleFont);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.15;
+  text-align: center;
+}
