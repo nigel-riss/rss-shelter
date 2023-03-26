@@ -8,6 +8,22 @@
   // visual
   background-color: var(--lightS);
   overflow: hidden;
+  transition: all 0.25s ease-out;
+}
+
+.pet:hover {
+  // visual
+  background-color: var(--lightS);
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  cursor: pointer;
+}
+
+.pet:hover .ghost-button {
+  // border
+  border-color: var(--primaryLight);
+
+  // visual
+  background-color: var(--primaryLight);
 }
 
 .pet__image {

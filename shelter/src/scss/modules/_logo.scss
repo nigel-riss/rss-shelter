@@ -2,6 +2,14 @@
   // typography
   text-align: center;
   text-decoration: none;
+
+  // visual
+  transition: all 0.25s ease-out;
+}
+
+.logo:hover {
+  // visual
+  opacity: 0.5;
 }
 
 .logo__title {

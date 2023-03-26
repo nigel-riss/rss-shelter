@@ -17,8 +17,10 @@
 
   // visual
   background-color: var(--primary);
+  transition: all 0.25s ease-out;
 }
 
 .button:hover {
-
+  // visual
+  background-color: var(--primaryLight);
 }

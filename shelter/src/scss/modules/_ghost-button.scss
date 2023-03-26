@@ -18,8 +18,13 @@
 
   // visual
   background-color: transparent;
+  transition: all 0.25s ease-out;
 }
 
 .ghost-button:hover {
+  // border
+  border-color: var(--primaryLight);
 
+  // visual
+  background-color: var(--primaryLight);
 }

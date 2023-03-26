@@ -44,6 +44,9 @@
   font-size: 1.5rem;
   line-height: 1.6;
   text-decoration: none;
+
+  // visual
+  transition: all 0.25s ease-out;
 }
 
 a.main-menu__link:hover {

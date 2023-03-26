@@ -12,8 +12,12 @@
 
   // visual
   background-color: var(--primary);
+  transition: all 0.25s ease-out;
+}
 
-
+.credit-card:hover {
+  // visual
+  background-color: var(--primaryLight);
 }
 
 .credit-card__icon {

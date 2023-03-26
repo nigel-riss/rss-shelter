@@ -7,10 +7,18 @@
   // typography
   text-decoration: none;
 
+  // visual
+  transition: all 0.25s ease-out;
+
   @include atDesktopS {
     // box model
     justify-content: flex-start;
   }
+}
+
+.contact:hover {
+  // visual
+  opacity: 0.5;
 }
 
 .contact--location {

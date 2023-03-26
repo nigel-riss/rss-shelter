@@ -426,6 +426,11 @@ body {
 .logo {
   text-align: center;
   text-decoration: none;
+  transition: all 0.25s ease-out;
+}
+
+.logo:hover {
+  opacity: 0.5;
 }
 
 .logo__title {
@@ -477,6 +482,7 @@ body {
   font-size: 1.5rem;
   line-height: 1.6;
   text-decoration: none;
+  transition: all 0.25s ease-out;
 }
 
 a.main-menu__link:hover {
@@ -572,6 +578,11 @@ a.main-menu__link:hover {
   line-height: 1.3;
   text-decoration: none;
   background-color: var(--primary);
+  transition: all 0.25s ease-out;
+}
+
+.button:hover {
+  background-color: var(--primaryLight);
 }
 
 .about {
@@ -694,6 +705,18 @@ a.main-menu__link:hover {
   border-radius: 0.9rem;
   background-color: var(--lightS);
   overflow: hidden;
+  transition: all 0.25s ease-out;
+}
+
+.pet:hover {
+  background-color: var(--lightS);
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  cursor: pointer;
+}
+
+.pet:hover .ghost-button {
+  border-color: var(--primaryLight);
+  background-color: var(--primaryLight);
 }
 
 .pet__image {
@@ -736,6 +759,12 @@ a.main-menu__link:hover {
   line-height: 1.3;
   text-decoration: none;
   background-color: transparent;
+  transition: all 0.25s ease-out;
+}
+
+.ghost-button:hover {
+  border-color: var(--primaryLight);
+  background-color: var(--primaryLight);
 }
 
 .help {
@@ -908,6 +937,11 @@ a.main-menu__link:hover {
   border-radius: 0.9rem;
   text-decoration: none;
   background-color: var(--primary);
+  transition: all 0.25s ease-out;
+}
+
+.credit-card:hover {
+  background-color: var(--primaryLight);
 }
 
 .credit-card__icon {
@@ -1019,11 +1053,16 @@ a.main-menu__link:hover {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  transition: all 0.25s ease-out;
 }
 @media (min-width: 1200px) {
   .contact {
     justify-content: flex-start;
   }
+}
+
+.contact:hover {
+  opacity: 0.5;
 }
 
 .contact--location {
