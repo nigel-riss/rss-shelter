@@ -1,0 +1,7 @@
+.wrapper {
+  @include atDesktopS {
+    // box model
+    width: var(--dWidth);
+    margin: 0 auto;
+  }
+}
