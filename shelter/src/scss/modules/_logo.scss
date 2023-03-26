@@ -36,3 +36,13 @@
   letter-spacing: 0.1em;
   line-height: 1.5rem;
 }
+
+.logo--inner .logo__title {
+  // typography
+  color: var(--darkL);
+}
+
+.logo--inner .logo__subtitle {
+  // typography
+  color: var(--dark3XL);
+}

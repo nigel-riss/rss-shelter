@@ -27,13 +27,21 @@
 }
 
 .pet__image {
+  // box model
+  height: 27rem;
+
   // typography
   font-size: 0;
 }
 
 .pet__image img {
   // box model
+  height: 100%;
   width: 100%;
+
+  // image
+  object-position: center;
+  object-fit: cover;
 }
 
 .pet__caption {

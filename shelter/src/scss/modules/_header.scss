@@ -12,6 +12,14 @@
   }
 }
 
+.header--inner {
+  @include atDesktopS {
+    // box model
+    margin-bottom: 0;
+    padding: 3rem 0;
+  }
+}
+
 .header__wrapper {
   @include atDesktopS {
     // box model

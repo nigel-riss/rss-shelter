@@ -10,7 +10,9 @@
 }
 
 .main-menu__item {
-
+  // box model
+  margin: 0;
+  padding: 0;
 }
 
 .main-menu__item--current {
@@ -52,4 +54,19 @@
 a.main-menu__link:hover {
   // typography
   color: var(--lightS);
+}
+
+.main-menu--inner .main-menu__link {
+  // typography
+  color: var(--darkL);
+}
+
+.main-menu--inner a.main-menu__link:hover {
+  // typography
+  color: var(--dark3XL);
+}
+
+.main-menu--inner .main-menu__item--current .main-menu__link {
+  // typography
+  color: var(--dark3XL);
 }

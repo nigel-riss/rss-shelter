@@ -8,41 +8,86 @@
     <title>Pets</title>
   </head>
   <body> 
-    <header class="header header--inner"> 
-      <div class="header__logo"> 
-        <div class="logo"> 
-          <p class="logo__title">Cozy House </p>
-          <p class="logo__subtitle">Shelter for pets in Boston</p>
-        </div>
+    <header class="header header--inner">
+      <div class="header__wrapper wrapper">
+        <header__logo><a class="logo logo--inner" href="index.html">
+            <p class="logo__title">Cozy House </p>
+            <p class="logo__subtitle">Shelter for pets in Boston</p></a></header__logo>
+        <nav class="header__nav">
+          <ul class="main-menu main-menu--inner">
+            <li class="main-menu__item"><a class="main-menu__link" href="index.html#about">About the shelter</a></li>
+            <li class="main-menu__item main-menu__item--current"> <span class="main-menu__link">Our pets </span></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="index.html#help">Help the shelter</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="#contacts">Contacts</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="header__nav"> 
-        <ul class="main-menu main-menu--inner"> 
-          <li class="main-menu__item"><a class="main-menu__link" href="#">About the shelter</a></li>
-          <li class="main-menu__item main-menu__item--current"> <span class="main-menu__link">Our pets </span></li>
-          <li class="main-menu__item"> <a class="main-menu__link" href="#">Help the shelter</a></li>
-          <li class="main-menu__item"> <a class="main-menu__link" href="#">Contacts</a></li>
-        </ul>
-      </nav>
     </header>
-    <section class="our-friends" id="our-friends">
-      <header class="our-friends__header">
-        <h2 class="section-title">Our friends who are looking for a house</h2>
-      </header>
-      <div class="our-friends__content"> 
-        <article class="pet"> 
-          <div class="pet__image"> <img src="./img/pets/" alt=""></div>
-          <h3 class="pet__title">Katrine</h3><a class="ghost-button" href="#">Learn more</a>
-        </article>
-        <article class="pet"> 
-          <div class="pet__image"> <img src="./img/pets/" alt=""></div>
-          <h3 class="pet__title">Jennifer</h3><a class="ghost-button" href="#">Learn more</a>
-        </article>
-        <article class="pet"> 
-          <div class="pet__image"> <img src="./img/pets/" alt=""></div>
-          <h3 class="pet__title">Woody</h3><a class="ghost-button" href="#">Learn more</a>
-        </article>
+    <section class="all-friends section" id="all-friends">
+      <div class="all-friends__wrapper wrapper">
+        <header class="all-friends__header">
+          <h2 class="section-title">Our friends who <br>are looking for a house</h2>
+        </header>
+        <div class="all-friends__content"> 
+          <article class="pet">
+            <div class="pet__image"><img src="./img/pets/katrine.png" alt="Katrine"></div>
+            <div class="pet__caption">
+              <h3 class="pet__title">Katrine</h3>
+              <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <article class="pet">
+            <div class="pet__image"><img src="./img/pets/jennifer.png" alt="Jennifer"></div>
+            <div class="pet__caption">
+              <h3 class="pet__title">Jennifer</h3>
+              <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <article class="pet">
+            <div class="pet__image"><img src="./img/pets/woody.png" alt="Woody"></div>
+            <div class="pet__caption">
+              <h3 class="pet__title">Woody</h3>
+              <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <article class="pet">
+            <div class="pet__image"><img src="./img/pets/sophia.png" alt="Sophia"></div>
+            <div class="pet__caption">
+              <h3 class="pet__title">Sophia</h3>
+              <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <article class="pet">
+            <div class="pet__image"><img src="./img/pets/timmy.png" alt="Timmy"></div>
+            <div class="pet__caption">
+              <h3 class="pet__title">Timmy</h3>
+              <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <article class="pet">
+            <div class="pet__image"><img src="./img/pets/charly.png" alt="Charly"></div>
+            <div class="pet__caption">
+              <h3 class="pet__title">Charly</h3>
+              <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <article class="pet">
+            <div class="pet__image"><img src="./img/pets/scarlett.png" alt="Scarlett"></div>
+            <div class="pet__caption">
+              <h3 class="pet__title">Scarlett</h3>
+              <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <article class="pet">
+            <div class="pet__image"><img src="./img/pets/freddie.png" alt="Freddie"></div>
+            <div class="pet__caption">
+              <h3 class="pet__title">Freddie</h3>
+              <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+            </div>
+          </article>
+        </div>
+        <div class="all-friends__pagination"><a class="button" href="pets.html">Get to know the rest</a></div>
       </div>
-      <div class="our-friends__pagination"><a class="button" href="pets.html">Get to know the rest</a></div>
     </section>
     <footer class="footer" id="contacts">
       <div class="footer__wrapper wrapper">
