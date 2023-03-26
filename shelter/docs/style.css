@@ -391,6 +391,7 @@ body {
 
 .logo {
   text-align: center;
+  text-decoration: none;
 }
 
 .logo__title {
@@ -656,9 +657,20 @@ body {
 
 .credit-card {
   display: flex;
+  align-items: center;
   padding: 1rem 1.5rem;
   border-radius: 0.9rem;
+  text-decoration: none;
   background-color: var(--primary);
+}
+
+.credit-card__icon {
+  width: 3rem;
+  margin-right: 1.5rem;
+}
+
+.credit-card__icon img {
+  width: 100%;
 }
 
 .credit-card__number {
@@ -667,6 +679,7 @@ body {
   font-size: 1.5rem;
   letter-spacing: 0.06em;
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .footer {
@@ -711,6 +724,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+}
+
+.contact--location {
+  justify-content: flex-start;
+}
+
+.contact__icon {
+  height: 3.2rem;
+  margin-right: 2rem;
+}
+
+.contact__icon img {
+  height: 100%;
 }
 
 .contact__text {

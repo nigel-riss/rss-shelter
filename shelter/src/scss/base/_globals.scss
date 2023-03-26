@@ -6,7 +6,6 @@ html {
   height: 100%;
 
   // typography
-  // color: $dark;
   font-family: var(--mainFont);
   font-size: 10px;
 
@@ -14,26 +13,6 @@ html {
   background-color: var(--lightXL);
   overflow-x: hidden;
   scroll-behavior: smooth;
-
-  // @include atTablet {
-  //   // typography
-  //   font-size: 3vw;
-  // }
-
-  // @include atDesktopS {
-  //   // typography
-  //   font-size: 10px;
-  // }
-
-  // @include atDesktopM {
-  //   // typography
-  //   font-size: 16px;
-  // }
-
-  // @include atDesktopL {
-  //   // typography
-  //   font-size: 18px;
-  // }
 }
 
 body {

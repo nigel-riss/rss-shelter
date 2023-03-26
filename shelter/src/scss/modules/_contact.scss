@@ -3,14 +3,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  // typography
+  text-decoration: none;
+}
+
+.contact--location {
+  // box model
+  justify-content: flex-start;
 }
 
 .contact__icon {
-
+  // box model
+  height: 3.2rem;
+  margin-right: 2rem;
 }
 
 .contact__icon img {
-
+  // box model
+  height: 100%;
 }
 
 .contact__text {

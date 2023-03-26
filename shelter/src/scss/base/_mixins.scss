@@ -33,7 +33,7 @@
 
 // Small Desktop and Tablets Landscape
 @mixin atDesktopS {
-  @media (min-width: 1000px) {
+  @media (min-width: 1200px) {
     @content;
   }
 }
