@@ -799,9 +799,30 @@ a.main-menu__link:hover {
   background-color: var(--lightL);
 }
 
+@media (min-width: 1200px) {
+  .donations__wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 91.5rem;
+    margin: 0 auto;
+  }
+}
+
 .donations__content {
   margin-bottom: 4.2rem;
   padding: 0 1rem;
+}
+@media (min-width: 1200px) {
+  .donations__content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 0;
+    padding: 0;
+  }
 }
 
 .donations__title {
@@ -823,9 +844,21 @@ a.main-menu__link:hover {
   line-height: 1.5;
   text-align: justify;
 }
+@media (min-width: 1200px) {
+  .donations__legal-info {
+    text-align: left;
+  }
+}
 
 .donations__image {
   margin: 0 2rem;
+}
+@media (min-width: 1200px) {
+  .donations__image {
+    flex-basis: 50.5;
+    flex-shrink: 0;
+    margin: 0;
+  }
 }
 
 .donations__image img {
@@ -857,6 +890,12 @@ a.main-menu__link:hover {
   letter-spacing: 0.06em;
   line-height: 1.1;
   white-space: nowrap;
+}
+@media (min-width: 1200px) {
+  .credit-card__number {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
 }
 
 .footer {
