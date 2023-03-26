@@ -6,6 +6,11 @@
 
   // typography
   text-decoration: none;
+
+  @include atDesktopS {
+    // box model
+    justify-content: flex-start;
+  }
 }
 
 .contact--location {
@@ -17,6 +22,9 @@
   // box model
   height: 3.2rem;
   margin-right: 2rem;
+
+  // typography
+  font-size: 0;
 }
 
 .contact__icon img {

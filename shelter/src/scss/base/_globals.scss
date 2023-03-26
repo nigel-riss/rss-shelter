@@ -19,8 +19,18 @@ body {
   // positioning
   position: relative;
 
+  // box model
+  box-sizing: border-box;
+
   // visual
   overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  // box model
+  box-sizing: inherit;
 }
 
 // .centered {

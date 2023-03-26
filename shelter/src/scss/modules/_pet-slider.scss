@@ -3,4 +3,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include atDesktopS {
+    // box model
+    flex-direction: row;
+    justify-content: center;
+    gap: 9rem;
+  }
 }

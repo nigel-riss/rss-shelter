@@ -12,12 +12,17 @@
 
   // visual
   background-color: var(--primary);
+
+
 }
 
 .credit-card__icon {
   // box model
   width: 3rem;
   margin-right: 1.5rem;
+
+  // typography
+  font-size: 0;
 }
 
 .credit-card__icon img {

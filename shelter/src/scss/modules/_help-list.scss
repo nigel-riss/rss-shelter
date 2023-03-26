@@ -38,6 +38,9 @@
   width: 5rem;
   margin-bottom: 2rem;
 
+  // typography
+  font-size: 0;
+
   @include atDesktopS {
     // box model
     width: 6rem;

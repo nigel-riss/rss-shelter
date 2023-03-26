@@ -45,6 +45,12 @@
   font-weight: 400;
   line-height: 1.6;
   text-align: center;
+
+  @include atDesktopS {
+    // typography
+    letter-spacing: 0.06em;
+    line-height: 1.1;
+  }
 }
 
 .donations__legal-info {
@@ -68,6 +74,9 @@
 .donations__image {
   // box model
   margin: 0 2rem;
+
+  // typography
+  font-size: 0;
 
   @include atDesktopS {
     // box model

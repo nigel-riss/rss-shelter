@@ -11,6 +11,9 @@
   margin-bottom: 4.2rem;
 
   @include atDesktopS {
+    // box model
+    margin-bottom: 6rem;
+
     // typography
     text-align: center;
   }
@@ -18,7 +21,10 @@
 
 
 .our-friends__content {
-  
+  @include atDesktopS {
+    // box model
+    margin-bottom: 6rem;
+  }
 }
 
 .our-friends__cta {
