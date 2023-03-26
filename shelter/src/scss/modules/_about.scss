@@ -4,13 +4,30 @@
 }
 
 .about__wrapper {
-
+  @include atDesktopS {
+    // box model
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 12rem;
+  }
 }
 
 .about__content {
   // box model
   margin-bottom: 4.2rem;
   padding: 0 1.5rem;
+
+  @include atDesktopS {
+    // box model
+    flex-basis: 43rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    // typography
+    text-align: left;
+  }
 }
 
 .about__image {
@@ -19,6 +36,13 @@
 
   // typography
   font-size: 0;
+
+  @include atDesktopS {
+    // box model
+    flex-basis: 30rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
 }
 
 .about__image img {

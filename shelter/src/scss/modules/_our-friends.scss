@@ -9,6 +9,11 @@
 .our-friends__header {
   // box model
   margin-bottom: 4.2rem;
+
+  @include atDesktopS {
+    // typography
+    text-align: center;
+  }
 }
 
 

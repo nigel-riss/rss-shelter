@@ -6,4 +6,20 @@
 .help__header {
   // box model
   margin-bottom: 4.2rem;
+
+  @include atDesktopS {
+    // box model
+    margin-bottom: 6rem;
+
+    // typography
+    text-align: center;
+  }
+}
+
+.help__content {
+  @include atDesktopS {
+    // box model
+    margin: 0 auto;
+    width: 103rem;
+  }
 }

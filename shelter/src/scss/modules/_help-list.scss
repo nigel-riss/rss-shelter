@@ -9,6 +9,13 @@
 
   // list
   list-style: none;
+
+  @include atDesktopS {
+    // box model
+    column-gap: 12rem;
+    row-gap: 5.5rem;
+    justify-content: center;
+  }
 }
 
 .help-list__item {
@@ -19,12 +26,23 @@
   flex-basis: 13rem;
   margin: 0;
   padding: 0;
+
+  @include atDesktopS {
+    // box model
+    flex-basis: auto;
+  }
 }
 
 .help-list__icon {
   // box model
   width: 5rem;
   margin-bottom: 2rem;
+
+  @include atDesktopS {
+    // box model
+    width: 6rem;
+    margin-bottom: 3rem;
+  }
 }
 
 .help-list__icon img {
@@ -41,4 +59,13 @@
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.06em;
+  line-height: 1.1;
+  text-align: center;
+  white-space: nowrap;
+
+  @include atDesktopS {
+    // typography
+    font-size: 2rem;
+    line-height: 1.15;
+  }
 }
