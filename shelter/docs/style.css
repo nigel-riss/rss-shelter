@@ -569,7 +569,7 @@ body {
   letter-spacing: 0.06em;
   line-height: 1.3;
   text-decoration: none;
-  background-color: var(--lightXL);
+  background-color: transparent;
 }
 
 .help {
@@ -578,6 +578,42 @@ body {
 
 .help__header {
   margin-bottom: 4.2rem;
+}
+
+.help-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 3rem;
+  list-style: none;
+}
+
+.help-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 13rem;
+  margin: 0;
+  padding: 0;
+}
+
+.help-list__icon {
+  width: 5rem;
+  margin-bottom: 2rem;
+}
+
+.help-list__icon img {
+  width: 100%;
+}
+
+.help-list__title {
+  margin: 0;
+  font-family: var(--titleFont);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
 }
 
 .donations {
