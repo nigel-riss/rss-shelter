@@ -1,4 +1,13 @@
+.pet-slider {
+  // positioning
+  position: relative;
+}
+
 .pet-slider__content {
+  // positioning
+  position: relative;
+  z-index: 2;
+
   // box model
   display: flex;
   flex-direction: column;
@@ -10,4 +19,40 @@
     justify-content: center;
     gap: 9rem;
   }
+}
+
+.pet-slider__controls {
+  // positioning
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  // box model
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.pet-slider__button {
+  // box model
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5.2rem;
+  width: 5.2rem;
+
+  // border
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+
+  // visual
+  transition: all 0.25s ease-out;
+}
+
+.pet-slider__button:hover {
+  // border
+  border-color: var(--primaryLight);
+
+  // visual
+  background-color: var(--primaryLight);
 }
