@@ -31,7 +31,7 @@ const dirs = {
   fonts:            `./src/fonts/**/*`,
 
   // Distribution
-  public:           `./docs`,
+  public:           `./`,
 }
 
 
