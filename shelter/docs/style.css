@@ -1162,3 +1162,54 @@ a.main-menu__link:hover {
     padding-bottom: 10rem;
   }
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination__item {
+  font-family: var(--titleFont);
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.pagination__inactive,
+.pagination__current,
+.pagination__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5.2rem;
+  width: 5.2rem;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+
+.pagination__inactive {
+  color: var(--darkS);
+  border-color: var(--darkS);
+}
+
+.pagination__current {
+  color: var(--dark3XL);
+  background-color: var(--primary);
+}
+
+.pagination__link {
+  color: var(--dark3XL);
+  text-decoration: none;
+  border-color: var(--primary);
+  transition: all 0.25s ease-out;
+}
+
+.pagination__link:hover {
+  border-color: var(--primaryLight);
+  background-color: var(--primaryLight);
+}
