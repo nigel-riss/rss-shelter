@@ -1,7 +1,7 @@
 .header {
   // box model
   margin-bottom: -15rem;
-  padding: 0 1rem;
+  padding: 0 2rem;
   padding-top: 3rem;
   padding-bottom: 6rem;
 
@@ -21,12 +21,10 @@
 }
 
 .header__wrapper {
-  @include atDesktopS {
-    // box model
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  // box model
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header__logo {
