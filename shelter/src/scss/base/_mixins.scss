@@ -24,8 +24,8 @@
   }
 }
 
-// Explicit for +768 Tablets
-@mixin atTablet768 {
+// Explicit for +760 Tablets
+@mixin atTablet760 {
   @media (min-width: 768px) {
     @content;
   }
