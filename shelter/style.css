@@ -339,6 +339,7 @@ body {
   position: relative;
   box-sizing: border-box;
   overflow-x: hidden;
+  text-rendering: geometricPrecision;
 }
 
 *,
@@ -641,6 +642,10 @@ a.main-menu__link:hover {
   }
 }
 
+.about__header {
+  margin-bottom: 2.5rem;
+}
+
 .about__content {
   margin-bottom: 4.2rem;
   padding: 0 1.5rem;
@@ -692,13 +697,14 @@ a.main-menu__link:hover {
 
 .section-text {
   margin: 0;
-  margin-top: 2.5rem;
+  margin-bottom: 2.2rem;
   font-size: 1.5rem;
   line-height: 1.6;
   text-align: justify;
 }
 @media (min-width: 1200px) {
   .section-text {
+    margin-top: 2.5rem;
     text-align: inherit;
   }
 }
@@ -718,6 +724,9 @@ a.main-menu__link:hover {
   }
 }
 
+.our-friends__content {
+  margin-bottom: 4.2rem;
+}
 @media (min-width: 1200px) {
   .our-friends__content {
     margin-bottom: 6rem;
@@ -748,15 +757,28 @@ a.main-menu__link:hover {
   }
 }
 
+.pet-slider__content .pet {
+  display: none;
+}
+.pet-slider__content .pet:first-of-type {
+  display: block;
+}
+
 .pet-slider__controls {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
   width: 100%;
-  pointer-events: none;
+  padding: 2rem 5.8rem;
+  padding-bottom: 0;
+}
+@media (min-width: 1200px) {
+  .pet-slider__controls {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
 }
 
 .pet-slider__button {
@@ -1025,13 +1047,14 @@ a.main-menu__link:hover {
 }
 
 .credit-card__icon {
+  height: 2.3rem;
   width: 3rem;
   margin-right: 1.5rem;
   font-size: 0;
 }
 
 .credit-card__icon img {
-  width: 100%;
+  height: 100%;
 }
 
 .credit-card__number {
@@ -1040,6 +1063,7 @@ a.main-menu__link:hover {
   font-size: 1.5rem;
   letter-spacing: 0.06em;
   line-height: 1.1;
+  line-height: 1.7rem;
   white-space: nowrap;
 }
 @media (min-width: 1200px) {
@@ -1113,6 +1137,7 @@ a.main-menu__link:hover {
 
 .footer-title {
   margin: 0;
+  padding: 0 1.5rem;
   color: var(--lightXL);
   font-family: var(--titleFont);
   font-size: 2.5rem;

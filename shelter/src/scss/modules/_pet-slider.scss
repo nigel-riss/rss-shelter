@@ -21,20 +21,35 @@
   }
 }
 
-.pet-slider__controls {
-  // positioning
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  transform: translateY(-50%);
+// TODO: remove this after part 2
+.pet-slider__content .pet {
+  // box model
+  display: none;
 
+  &:first-of-type {
+    // box model
+    display: block;
+  }
+}
+
+.pet-slider__controls {
   // box model
   display: flex;
   justify-content: space-between;
   width: 100%;
-
-  // visual
-  pointer-events: none;
+  padding: 2rem 5.8rem;
+  padding-bottom: 0;
+  
+  @include atDesktopS {
+    // positioning
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    // visual
+    pointer-events: none;
+  }
 }
 
 .pet-slider__button {
