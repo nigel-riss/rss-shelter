@@ -13,6 +13,11 @@ html {
   background-color: var(--lightXL);
   overflow-x: hidden;
   scroll-behavior: smooth;
+
+  @include atDesktopS {
+    // typography
+    font-size: 10px;
+  }
 }
 
 body {

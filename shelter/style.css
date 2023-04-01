@@ -334,6 +334,11 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+@media (min-width: 1200px) {
+  html {
+    font-size: 10px;
+  }
+}
 
 body {
   position: relative;
@@ -383,10 +388,13 @@ body {
   font-style: normal;
   font-display: swap;
 }
+.wrapper {
+  margin: 0 auto;
+  max-width: 60rem;
+}
 @media (min-width: 1200px) {
   .wrapper {
     width: var(--dWidth);
-    margin: 0 auto;
   }
 }
 
@@ -543,6 +551,10 @@ a.main-menu__link:hover {
   }
 }
 
+.hero__wrapper {
+  margin: 0 auto;
+  max-width: 60rem;
+}
 @media (min-width: 1200px) {
   .hero__wrapper {
     display: flex;
@@ -662,7 +674,8 @@ a.main-menu__link:hover {
 }
 
 .about__image {
-  margin: 0 2rem;
+  margin: 0 auto;
+  width: 26rem;
   font-size: 0;
 }
 @media (min-width: 1200px) {

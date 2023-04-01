@@ -16,6 +16,10 @@
 }
 
 .hero__wrapper {
+  // box model
+  margin: 0 auto;
+  max-width: 60rem;
+
   @include atDesktopS {
     // box model
     display: flex;
