@@ -42,6 +42,11 @@
       display: block;
     }
   }
+
+  @include atDesktopS {
+    // box model
+    display: block;
+  }
 }
 
 .pet-slider__controls {
@@ -64,6 +69,11 @@
     
     // visual
     pointer-events: none;
+  }
+
+  @include atDesktopS {
+    // box model
+    padding: 0;
   }
 }
 
