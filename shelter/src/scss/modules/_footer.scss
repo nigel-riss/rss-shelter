@@ -9,23 +9,46 @@
     url(./img/noise-transparent@2x.png),
     radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%);
 
+  @include atTablet760 {
+    // box model
+    padding: 3rem 6.4rem;
+    padding-bottom: 0;
+  }
+
   @include atDesktopS {
     // box model
-    padding: 0;
+    padding: 0 3rem;
     padding-top: 4rem;
   }
 }
 
-.footer__wrapper {
+.footer__wrapper {  
+  @include atDesktopS {
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+}
+
+.footer__content {
   // box model
   display: flex;
   flex-direction: column;
-  gap: 4rem;
 
+  @include atTablet760 {
+    // box model
+    display: grid;
+    grid-template-columns: 27.9rem 30.2rem;
+    justify-content: space-between;
+    margin-bottom: 6.5rem;
+  }
+  
   @include atDesktopS {
     // box model
-    flex-direction: row;
-    justify-content: space-between;
+    column-gap: 16rem;
+    margin-bottom: 6rem;
   }
 }
 
@@ -34,19 +57,29 @@
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
 
-  @include atDesktopS {
+  @include atTablet760 {
     // box model
     justify-content: space-between;
+    margin: 0;
+  }
+
+  @include atTablet760 {
+    // box model
     flex-basis: 30rem;
-    gap: unset;
-    margin-top: 1.6rem;
-    padding-bottom: 6rem;
+    gap: 3.3rem;
+  }
+  
+  @include atDesktopS {
+    // box model
+    padding-top: 1.6rem;
   }
 }
 
 .footer__block:first-of-type {
-  @include atDesktopS {
+  @include atTablet760 {
     // box model
     flex-basis: 27.9rem;
   }
@@ -54,7 +87,9 @@
 
 .footer__image {
   // box model
-  margin: 0 2rem;
+  margin: 0 auto;
+  max-width: 34rem;
+  padding: 0 2rem;
 
   // typography
   font-size: 0;
@@ -64,6 +99,7 @@
     flex-basis: 30rem;
     flex-shrink: 0;
     margin: 0;
+    padding: 0;
   }
 }
 

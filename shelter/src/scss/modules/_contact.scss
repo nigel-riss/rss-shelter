@@ -10,7 +10,7 @@
   // visual
   transition: all 0.25s ease-out;
 
-  @include atDesktopS {
+  @include atTablet760 {
     // box model
     justify-content: flex-start;
   }
