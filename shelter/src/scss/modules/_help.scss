@@ -7,7 +7,7 @@
   // box model
   margin-bottom: 4.2rem;
 
-  @include atDesktopS {
+  @include atTablet760 {
     // box model
     margin-bottom: 6rem;
 
@@ -17,9 +17,15 @@
 }
 
 .help__content {
+  @include atTablet760 {
+    // box model
+    padding: 0 3rem;
+  }
+
   @include atDesktopS {
     // box model
     margin: 0 auto;
+    padding: 0;
     width: 103rem;
   }
 }

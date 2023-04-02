@@ -13,10 +13,15 @@
   flex-direction: column;
   align-items: center;
 
-  @include atDesktopS {
+  @include atTablet760 {
     // box model
     flex-direction: row;
     justify-content: center;
+    gap: 4rem;
+  }
+
+  @include atDesktopS {
+    // box model
     gap: 9rem;
   }
 }
@@ -30,6 +35,13 @@
     // box model
     display: block;
   }
+
+  @include atTablet760 {
+    &:nth-last-of-type(2) {
+      // box model
+      display: block;
+    }
+  }
 }
 
 .pet-slider__controls {
@@ -40,12 +52,15 @@
   padding: 2rem 5.8rem;
   padding-bottom: 0;
   
-  @include atDesktopS {
+  @include atTablet {
     // positioning
     position: absolute;
     z-index: 2;
     top: 50%;
     transform: translateY(-50%);
+
+    // box model
+    padding: 0 3rem;
     
     // visual
     pointer-events: none;
