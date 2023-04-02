@@ -967,7 +967,7 @@ a.main-menu__link:hover {
 
 @media (min-width: 768px) {
   .help__content {
-    padding: 0 3rem;
+    padding: 0 6.9rem;
   }
 }
 @media (min-width: 1200px) {
@@ -982,8 +982,8 @@ a.main-menu__link:hover {
   margin: 0;
   padding: 0;
   display: grid;
-  justify-content: center;
-  gap: 3rem;
+  justify-content: space-between;
+  row-gap: 3rem;
   grid-template-columns: repeat(auto-fill, 13rem);
   list-style: none;
 }
@@ -998,6 +998,7 @@ a.main-menu__link:hover {
   .help-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     column-gap: 12rem;
   }
 }
@@ -1069,8 +1070,15 @@ a.main-menu__link:hover {
 }
 
 .donations__content {
+  margin: 0 auto;
   margin-bottom: 4.2rem;
   padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .donations__content {
+    margin-bottom: 6rem;
+    padding: 0 19.4rem;
+  }
 }
 @media (min-width: 1200px) {
   .donations__content {
@@ -1091,10 +1099,21 @@ a.main-menu__link:hover {
   line-height: 1.6;
   text-align: center;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .donations__title {
+    text-align: left;
     letter-spacing: 0.06em;
     line-height: 1.1;
+  }
+}
+
+.donations__card {
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .donations__card {
+    justify-content: flex-start;
   }
 }
 
@@ -1107,15 +1126,22 @@ a.main-menu__link:hover {
   line-height: 1.5;
   text-align: justify;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .donations__legal-info {
     text-align: left;
   }
 }
 
 .donations__image {
-  margin: 0 2rem;
+  margin: 0 auto;
+  max-width: 50.5rem;
+  padding: 0 2rem;
   font-size: 0;
+}
+@media (min-width: 768px) {
+  .donations__image {
+    padding: 0;
+  }
 }
 @media (min-width: 1200px) {
   .donations__image {
@@ -1163,7 +1189,7 @@ a.main-menu__link:hover {
   line-height: 1.7rem;
   white-space: nowrap;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .credit-card__number {
     font-size: 2rem;
     line-height: 1.15;

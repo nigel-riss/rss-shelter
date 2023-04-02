@@ -21,8 +21,15 @@
 
 .donations__content {
   // box model
+  margin: 0 auto;
   margin-bottom: 4.2rem;
   padding: 0 1rem;
+
+  @include atTablet760 {
+    // box model
+    margin-bottom: 6rem;
+    padding: 0 19.4rem;
+  }
 
   @include atDesktopS {
     // box model
@@ -46,10 +53,23 @@
   line-height: 1.6;
   text-align: center;
 
-  @include atDesktopS {
+  @include atTablet760 {
+    // box model
+    text-align: left;
     // typography
+
     letter-spacing: 0.06em;
     line-height: 1.1;
+  }
+}
+
+.donations__card {
+  // box model
+  display: flex;
+  justify-content: center;
+
+  @include atTablet760 {
+    justify-content: flex-start;
   }
 }
 
@@ -65,7 +85,7 @@
   line-height: 1.5;
   text-align: justify;
 
-  @include atDesktopS {
+  @include atTablet760 {
     // typography
     text-align: left;
   }
@@ -73,10 +93,17 @@
 
 .donations__image {
   // box model
-  margin: 0 2rem;
+  margin: 0 auto;
+  max-width: 50.5rem;
+  padding: 0 2rem;
 
   // typography
   font-size: 0;
+
+  @include atTablet760 {
+    // box model
+    padding: 0;
+  }
 
   @include atDesktopS {
     // box model
