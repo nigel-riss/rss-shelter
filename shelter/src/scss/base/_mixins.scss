@@ -59,3 +59,12 @@
   margin: 0 auto;
   width: $dWidth;
 }
+
+@mixin section {
+  @include atTablet760 {
+    // box model
+    padding: 0;
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+  }
+}

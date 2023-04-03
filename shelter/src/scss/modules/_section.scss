@@ -1,4 +1,5 @@
 .section {
+  border: 2px solid fuchsia;
   @include atTablet760 {
     // box model
     padding: 0;

@@ -19,9 +19,17 @@
 }
 
 .header--inner {
+  // box model
+  margin-bottom: 0;
+  padding: 3rem 2rem;
+
+  @include atTablet760 {
+    // box model
+    padding: 3rem;
+  }
+
   @include atDesktopS {
     // box model
-    margin-bottom: 0;
     padding: 3rem 0;
   }
 }

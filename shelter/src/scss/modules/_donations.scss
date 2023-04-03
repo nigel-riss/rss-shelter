@@ -4,6 +4,8 @@
 
   // visual
   background-color: var(--lightL);
+
+  @include section;
 }
 
 .donations__wrapper {

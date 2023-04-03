@@ -1,6 +1,8 @@
 .about {
   // box model
   padding: 4.2rem 1rem;
+
+  @include section;
 }
 
 .about__wrapper {

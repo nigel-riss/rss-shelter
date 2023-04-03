@@ -1,6 +1,8 @@
 .help {
   // box model
   padding: 4.2rem 1.5rem;
+
+  @include section;
 }
 
 .help__header {
