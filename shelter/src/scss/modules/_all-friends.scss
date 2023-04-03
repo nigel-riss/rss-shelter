@@ -10,6 +10,11 @@
   @include atTablet760 {
     padding-bottom: 7.2rem;
   }
+
+  @include atDesktopS {
+    // box model
+    padding-bottom: 10rem;
+  }
 }
 
 .all-friends__header {
@@ -40,9 +45,15 @@
   grid-template-columns: repeat(auto-fill, 27rem);
   margin-bottom: 4.2rem;
 
+  @include atTablet {
+    // box model
+    justify-content: space-evenly;
+  }
+
   @include atTablet760 {
     // box model
     margin-bottom: 4rem;
+    padding: 0 9.4rem;
   }
 
   @include atDesktopS {
@@ -52,6 +63,7 @@
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     margin-bottom: 6rem;
+    padding: 0;
   }
 }
 
@@ -69,6 +81,11 @@
       // box model
       display: block;
     }
+  }
+
+  @include atDesktopS {
+    // box model
+    display: block;
   }
 }
 

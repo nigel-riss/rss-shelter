@@ -1414,6 +1414,11 @@ a.main-menu__link:hover {
     padding-bottom: 7.2rem;
   }
 }
+@media (min-width: 1200px) {
+  .all-friends {
+    padding-bottom: 10rem;
+  }
+}
 
 .all-friends__header {
   margin-bottom: 4.2rem;
@@ -1438,9 +1443,15 @@ a.main-menu__link:hover {
   grid-template-columns: repeat(auto-fill, 27rem);
   margin-bottom: 4.2rem;
 }
+@media (min-width: 600px) {
+  .all-friends__content {
+    justify-content: space-evenly;
+  }
+}
 @media (min-width: 768px) {
   .all-friends__content {
     margin-bottom: 4rem;
+    padding: 0 9.4rem;
   }
 }
 @media (min-width: 1200px) {
@@ -1450,6 +1461,7 @@ a.main-menu__link:hover {
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     margin-bottom: 6rem;
+    padding: 0;
   }
 }
 
@@ -1461,6 +1473,11 @@ a.main-menu__link:hover {
 }
 @media (min-width: 600px) {
   .all-friends__content .pet:nth-of-type(-n + 6) {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .all-friends__content .pet {
     display: block;
   }
 }
