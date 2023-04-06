@@ -1,0 +1,17 @@
+.menu-button {
+  // box model
+  padding: 0;
+
+  // typography
+  font-size: 0;
+
+  // border
+  border: none;
+
+  // visual
+  background-color: transparent;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}

@@ -4,13 +4,15 @@
 
   // visual
   background-color: var(--lightL);
+
+  @include section;
 }
 
 .our-friends__header {
   // box model
   margin-bottom: 4.2rem;
 
-  @include atDesktopS {
+  @include atTablet760 {
     // box model
     margin-bottom: 6rem;
 
@@ -21,7 +23,10 @@
 
 
 .our-friends__content {
-  @include atDesktopS {
+  // box model
+  margin-bottom: 4.2rem;
+
+  @include atTablet760 {
     // box model
     margin-bottom: 6rem;
   }

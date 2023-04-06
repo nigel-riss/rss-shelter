@@ -2,12 +2,17 @@
   // box model
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   margin: 0;
   padding: 0;
 
   // list
   list-style: none;
+
+  @include atTablet760 {
+    // box model
+    gap: 2rem;
+  }
 }
 
 .pagination__item {

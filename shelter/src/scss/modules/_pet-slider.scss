@@ -13,28 +13,68 @@
   flex-direction: column;
   align-items: center;
 
-  @include atDesktopS {
+  @include atTablet760 {
     // box model
     flex-direction: row;
     justify-content: center;
+    gap: 4rem;
+  }
+
+  @include atDesktopS {
+    // box model
     gap: 9rem;
   }
 }
 
-.pet-slider__controls {
-  // positioning
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  transform: translateY(-50%);
+// TODO: remove this after part 2
+.pet-slider__content .pet {
+  // box model
+  display: none;
 
+  &:first-of-type {
+    // box model
+    display: block;
+  }
+
+  @include atTablet760 {
+    &:nth-last-of-type(2) {
+      // box model
+      display: block;
+    }
+  }
+
+  @include atDesktopS {
+    // box model
+    display: block;
+  }
+}
+
+.pet-slider__controls {
   // box model
   display: flex;
   justify-content: space-between;
   width: 100%;
+  padding: 2rem 5.8rem;
+  padding-bottom: 0;
+  
+  @include atTablet {
+    // positioning
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
 
-  // visual
-  pointer-events: none;
+    // box model
+    padding: 0 3rem;
+    
+    // visual
+    pointer-events: none;
+  }
+
+  @include atDesktopS {
+    // box model
+    padding: 0;
+  }
 }
 
 .pet-slider__button {

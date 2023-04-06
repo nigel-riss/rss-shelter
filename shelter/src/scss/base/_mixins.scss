@@ -24,8 +24,8 @@
   }
 }
 
-// Explicit for +768 Tablets
-@mixin atTablet768 {
+// Explicit for +760 Tablets
+@mixin atTablet760 {
   @media (min-width: 768px) {
     @content;
   }
@@ -58,4 +58,13 @@
   // box model
   margin: 0 auto;
   width: $dWidth;
+}
+
+@mixin section {
+  @include atTablet760 {
+    // box model
+    padding: 0;
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+  }
 }

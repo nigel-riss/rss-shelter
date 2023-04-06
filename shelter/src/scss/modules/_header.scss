@@ -1,9 +1,15 @@
 .header {
   // box model
   margin-bottom: -15rem;
-  padding: 0 1rem;
+  padding: 0 2rem;
   padding-top: 3rem;
   padding-bottom: 6rem;
+
+  @include atTablet760 {
+    // box model
+    padding: 3rem;
+    padding-bottom: 6rem;
+  }
 
   @include atDesktopS {
     // box model
@@ -13,20 +19,26 @@
 }
 
 .header--inner {
+  // box model
+  margin-bottom: 0;
+  padding: 3rem 2rem;
+
+  @include atTablet760 {
+    // box model
+    padding: 3rem;
+  }
+
   @include atDesktopS {
     // box model
-    margin-bottom: 0;
     padding: 3rem 0;
   }
 }
 
 .header__wrapper {
-  @include atDesktopS {
-    // box model
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  // box model
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header__logo {
@@ -38,8 +50,15 @@
   // box model
   display: none;
 
-  @include atDesktopS {
+  @include atTablet760 {
     // box model
     display: block;
+  }
+}
+
+.header__menu-button {
+  @include atTablet760 {
+    // box model
+    display: none;
   }
 }
