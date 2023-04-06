@@ -76,6 +76,7 @@ const copyAssets = () => gulp
     dirs.images,
     dirs.favicon,
     dirs.fonts,
+    dirs.jsSrc,
   ], {
     base: `src`,
   })
@@ -101,6 +102,7 @@ export const watch = () => {
     dirs.images,
     dirs.favicon,
     dirs.fonts,
+    dirs.jsSrc,
   ], copyAssets)
 }
 
