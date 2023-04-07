@@ -68,3 +68,17 @@
     padding-bottom: 10rem;
   }
 }
+
+@mixin overlay {
+  // positioning
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  // visual
+  background-color: transparent;
+  transition: all 0.5s ease-out;
+}

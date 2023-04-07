@@ -474,6 +474,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 1;
   background-color: transparent;
   transition: all 0.5s ease-out;
 }
@@ -488,6 +489,7 @@ body {
   top: 0;
   right: -32rem;
   bottom: 0;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1665,4 +1667,35 @@ a.main-menu__link:hover {
 .pagination__link:hover {
   border-color: var(--primaryLight);
   background-color: var(--primaryLight);
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 11;
+  font-family: var(--titleFont);
+}
+
+.popup__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: transparent;
+  transition: all 0.5s ease-out;
+  border: 2px solid fuchsia;
+}
+
+.popup__form {
+  position: relative;
+  z-index: 2;
+}
+
+.popup__image {
+  display: none;
 }

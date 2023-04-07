@@ -1,0 +1,60 @@
+.popup {
+  // positioning
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 11;
+
+  // typography
+  font-family: var(--titleFont);
+
+  // visual
+  
+}
+
+.popup__overlay {
+  @include overlay;
+
+  border: 2px solid fuchsia;
+}
+
+.popup__form {
+  // positioning
+  position: relative;
+  z-index: 2;
+}
+
+.popup__image {
+  // box model
+  display: none;
+}
+
+.popup__image img {
+
+}
+
+.popup__content {
+
+}
+
+.popup__title {
+
+}
+
+.popup__subtitle {
+
+}
+
+.popup__description {
+
+}
+
+.popup__list {
+
+}
+
+.popup__item {
+
+}
