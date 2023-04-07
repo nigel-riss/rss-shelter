@@ -1,11 +1,14 @@
 .header {
+  // positioning
+  position: relative;
+
   // box model
   margin-bottom: -15rem;
   padding: 0 2rem;
   padding-top: 3rem;
   padding-bottom: 6rem;
 
-  @include atTablet760 {
+  @include atTablet768 {
     // box model
     padding: 3rem;
     padding-bottom: 6rem;
@@ -23,7 +26,7 @@
   margin-bottom: 0;
   padding: 3rem 2rem;
 
-  @include atTablet760 {
+  @include atTablet768 {
     // box model
     padding: 3rem;
   }
@@ -46,18 +49,12 @@
   display: flex;
 }
 
-.header__nav {
-  // box model
-  display: none;
-
-  @include atTablet760 {
-    // box model
-    display: block;
-  }
-}
-
 .header__menu-button {
-  @include atTablet760 {
+  // positioning
+  position: relative;
+  z-index: 9;
+
+  @include atTablet768 {
     // box model
     display: none;
   }

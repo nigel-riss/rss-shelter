@@ -1,0 +1,86 @@
+.header-nav {
+  // positioning
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 8;
+
+  // visual
+  pointer-events: none;
+
+  @include atTablet768 {
+    // positioning
+    position: relative;
+
+    // box model
+    display: block;
+
+    // visual
+    pointer-events: all;
+  }
+}
+
+.header-nav__overlay {
+  // positioning
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  // visual
+  background-color: transparent;
+  transition: all 0.5s ease-out;
+
+  @include atTablet768 {
+    // box model
+    display: none;
+  }
+}
+
+.header-nav__menu {
+  // positioning
+  position: absolute;
+  top: 0;
+  right: -32rem;
+  bottom: 0;
+
+  // box model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32rem;
+
+  // visual
+  background-color: var(--dark3XL);
+  transition: all 0.5s ease-out;
+
+  @include atTablet768 {
+    // positioning
+    position: relative;
+    right: auto;
+
+    // box model
+    width: auto;
+
+    // visual
+    background-color: transparent;
+  }
+}
+
+.header-nav--open {
+  // visual
+  pointer-events: all;
+
+  .header-nav__overlay {
+    // visual
+    background-color: var(--dark3XL60);
+  }
+
+  .header-nav__menu {
+    // positioning
+    right: 0;
+  }
+}

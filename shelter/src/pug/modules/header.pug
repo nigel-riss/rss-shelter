@@ -4,16 +4,18 @@ header.header
       a.logo(href="#")
         p.logo__title Cozy House
         p.logo__subtitle Shelter for pets in Boston
-    nav.header__nav
-      ul.main-menu
-        li.main-menu__item.main-menu__item--current
-          span.main-menu__link About the shelter
-        li.main-menu__item
-          a.main-menu__link(href="pets.html") Our pets
-        li.main-menu__item
-          a.main-menu__link(href="#help") Help the shelter
-        li.main-menu__item
-          a.main-menu__link(href="#contacts") Contacts
+    nav#header-nav.header-nav
+      .header-nav__overlay
+      .header-nav__menu
+        ul#main-menu.main-menu
+          li.main-menu__item.main-menu__item--current
+            span.main-menu__link About the shelter
+          li.main-menu__item
+            a.main-menu__link(href="pets.html") Our pets
+          li.main-menu__item
+            a.main-menu__link(href="#help") Help the shelter
+          li.main-menu__item
+            a.main-menu__link(href="#contacts") Contacts
     .header__menu-button
       button#menu-button.menu-button
         .menu-button__middle 🍔
