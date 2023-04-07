@@ -10,7 +10,7 @@
   // list
   list-style: none;
 
-  @include atTablet760 {
+  @include atTablet768 {
     // box model
     grid-template-columns: repeat(auto-fill, 17rem);
     column-gap: 6rem;
@@ -50,7 +50,7 @@
   // typography
   font-size: 0;
 
-  @include atTablet760 {
+  @include atTablet768 {
     // box model
     width: 6rem;
     height: 6rem;
@@ -76,7 +76,7 @@
   text-align: center;
   white-space: nowrap;
 
-  @include atTablet760 {
+  @include atTablet768 {
     // typography
     font-size: 2rem;
     line-height: 1.15;

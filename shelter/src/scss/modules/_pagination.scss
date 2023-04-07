@@ -9,7 +9,7 @@
   // list
   list-style: none;
 
-  @include atTablet760 {
+  @include atTablet768 {
     // box model
     gap: 2rem;
   }

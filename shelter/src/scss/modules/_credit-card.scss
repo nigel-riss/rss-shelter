@@ -45,7 +45,7 @@
   line-height: 1.7rem;
   white-space: nowrap;
 
-  @include atTablet760 {
+  @include atTablet768 {
     // typography
     font-size: 2rem;
     line-height: 1.15;

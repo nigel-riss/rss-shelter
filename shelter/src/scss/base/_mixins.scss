@@ -25,7 +25,7 @@
 }
 
 // Explicit for +760 Tablets
-@mixin atTablet760 {
+@mixin atTablet768 {
   @media (min-width: 768px) {
     @content;
   }
@@ -61,7 +61,7 @@
 }
 
 @mixin section {
-  @include atTablet760 {
+  @include atTablet768 {
     // box model
     padding: 0;
     padding-top: 8rem;

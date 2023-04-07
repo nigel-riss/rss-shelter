@@ -27,7 +27,7 @@
   margin-bottom: 4.2rem;
   padding: 0 1rem;
 
-  @include atTablet760 {
+  @include atTablet768 {
     // box model
     margin-bottom: 6rem;
     padding: 0 19.4rem;
@@ -55,7 +55,7 @@
   line-height: 1.6;
   text-align: center;
 
-  @include atTablet760 {
+  @include atTablet768 {
     // box model
     text-align: left;
     // typography
@@ -70,7 +70,7 @@
   display: flex;
   justify-content: center;
 
-  @include atTablet760 {
+  @include atTablet768 {
     justify-content: flex-start;
   }
 }
@@ -87,7 +87,7 @@
   line-height: 1.5;
   text-align: justify;
 
-  @include atTablet760 {
+  @include atTablet768 {
     // typography
     text-align: left;
   }
@@ -102,7 +102,7 @@
   // typography
   font-size: 0;
 
-  @include atTablet760 {
+  @include atTablet768 {
     // box model
     padding: 0;
   }

@@ -7,7 +7,7 @@
 
   @include section;
 
-  @include atTablet760 {
+  @include atTablet768 {
     padding-bottom: 7.2rem;
   }
 
@@ -21,7 +21,7 @@
   // box model
   margin-bottom: 4.2rem;
 
-  @include atTablet760 {
+  @include atTablet768 {
     // box model
     margin-bottom: 3rem;
 
@@ -50,7 +50,7 @@
     justify-content: space-evenly;
   }
 
-  @include atTablet760 {
+  @include atTablet768 {
     // box model
     margin-bottom: 4rem;
     padding: 0 9.4rem;
