@@ -457,7 +457,11 @@ body {
 }
 
 .menu-button {
+  position: relative;
+  transform-origin: center center;
   padding: 0;
+  height: 2.2rem;
+  width: 3rem;
   font-size: 0;
   border: none;
   background-color: transparent;
@@ -465,6 +469,48 @@ body {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  transition: all 0.5s ease-out;
+}
+
+.menu-button::before,
+.menu-button::after {
+  content: "";
+}
+
+.menu-button__middle,
+.menu-button::before,
+.menu-button::after {
+  position: absolute;
+  left: 0;
+  height: 0.2rem;
+  width: 3rem;
+  background-color: var(--primary);
+  transition: all 0.5s ease-out;
+}
+
+.menu-button::before {
+  top: 0;
+}
+
+.menu-button__middle {
+  top: 1rem;
+}
+
+.menu-button::after {
+  bottom: 0;
+}
+
+.menu-button--inner::before,
+.menu-button--inner .menu-button__middle, .menu-button--inner::after {
+  background-color: var(--dark3XL);
+}
+
+.menu-button--open {
+  transform: rotate(90deg);
+}
+.menu-button--open::before,
+.menu-button--open .menu-button__middle, .menu-button--open::after {
+  background-color: var(--primary);
 }
 
 .logo {
