@@ -468,7 +468,7 @@ body {
   }
 }
 
-.header-nav__overlay {
+.header-nav__backdrop {
   position: absolute;
   top: 0;
   right: 0;
@@ -479,7 +479,7 @@ body {
   transition: all 0.5s ease-out;
 }
 @media (min-width: 768px) {
-  .header-nav__overlay {
+  .header-nav__backdrop {
     display: none;
   }
 }
@@ -1679,7 +1679,7 @@ a.main-menu__link:hover {
   font-family: var(--titleFont);
 }
 
-.popup__overlay {
+.popup__backdrop {
   position: absolute;
   top: 0;
   right: 0;

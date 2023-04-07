@@ -14,8 +14,8 @@
   
 }
 
-.popup__overlay {
-  @include overlay;
+.popup__backdrop {
+  @include backdrop;
 
   border: 2px solid fuchsia;
 }

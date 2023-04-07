@@ -22,8 +22,8 @@
   }
 }
 
-.header-nav__overlay {
-  @include overlay;
+.header-nav__backdrop {
+  @include backdrop;
 
   @include atTablet768 {
     // box model
