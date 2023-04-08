@@ -22,6 +22,12 @@
     // box model
     padding: 6.9rem;
   }
+
+  @include atDesktopS {
+    // box model
+    // display: none;
+    padding: 0;
+  }
 }
 
 .popup__backdrop {
@@ -58,12 +64,6 @@
     // box model
     display: flex;
   }
-
-  @include atDesktopS {
-    // box model
-    padding: 5rem 2rem;
-    // TODO: move this to content
-  }
 }
 
 .popup__close{
@@ -85,17 +85,33 @@
     // typography
     font-size: 0;
   }
+
+  @include atDesktopS {
+    // box model
+    height: 50rem;
+    width: 50rem;
+  }
 }
 
 .popup__image img {
   // box model
   height: 100%;
   width: 100%;
+
+  // other
+  object-fit: cover;
+  object-position: center center;
 }
 
 .popup__content {
   // box model
   padding: 1rem;
+
+  @include atDesktopS {
+    // box model
+    padding: 5rem 2rem;
+    padding-left: 2.9rem;
+  }
 }
 
 .popup__title {
@@ -132,6 +148,11 @@
     // typography
     text-align: left;
   }
+
+  @include atDesktopS {
+    // box model
+    margin-bottom: 4rem;
+  }
 }
 
 .popup__description {
@@ -152,6 +173,14 @@
     // typography
     text-align: left;
   }
+
+  @include atDesktopS {
+    // box model
+    margin-bottom: 4rem;
+
+    // typography
+    font-size: 1.5rem;
+  }
 }
 
 .popup__list {
@@ -171,6 +200,11 @@
 
   // visual
   list-style: none;
+
+  @include atDesktopS {
+    // box model
+    margin-top: 1.2rem;
+  }
 }
 
 .popup__item::before {
