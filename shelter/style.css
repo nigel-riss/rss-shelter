@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1682,6 +1683,11 @@ a.main-menu__link:hover {
   padding: 0 4rem;
   font-family: var(--titleFont);
 }
+@media (min-width: 600px) {
+  .popup {
+    padding: 6.9rem;
+  }
+}
 
 .popup__backdrop {
   position: absolute;
@@ -1698,8 +1704,19 @@ a.main-menu__link:hover {
   position: relative;
   z-index: 2;
   padding: 1rem;
+  max-width: 90rem;
   border-radius: 0.9rem;
   background-color: var(--lightS);
+}
+@media (min-width: 768px) {
+  .popup__window {
+    display: flex;
+  }
+}
+@media (min-width: 1200px) {
+  .popup__window {
+    padding: 5rem 2rem;
+  }
 }
 
 .popup__close {
@@ -1708,6 +1725,11 @@ a.main-menu__link:hover {
 
 .popup__image {
   display: none;
+}
+@media (min-width: 768px) {
+  .popup__image {
+    display: block;
+  }
 }
 
 .popup__title {
@@ -1741,7 +1763,7 @@ a.main-menu__link:hover {
 
 .popup__list {
   margin: 0;
-  padding-left: 1.4rem;
+  padding: 0;
 }
 
 .popup__item {
@@ -1749,4 +1771,11 @@ a.main-menu__link:hover {
   font-size: 1.5rem;
   letter-spacing: 0.06em;
   line-height: 1.1;
+  list-style: none;
+}
+
+.popup__item::before {
+  content: "•";
+  margin-right: 0.5em;
+  color: var(--primary);
 }

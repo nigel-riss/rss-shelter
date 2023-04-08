@@ -17,7 +17,11 @@
   font-family: var(--titleFont);
 
   // visual
-  
+
+  @include atTablet {
+    // box model
+    padding: 6.9rem;
+  }
 }
 
 .popup__backdrop {
@@ -42,12 +46,24 @@
 
   // box model
   padding: 1rem;
+  max-width: 90rem;
 
   // border
   border-radius: 0.9rem;
 
   // visual
   background-color: var(--lightS);
+
+  @include atTablet768 {
+    // box model
+    display: flex;
+  }
+
+  @include atDesktopS {
+    // box model
+    padding: 5rem 2rem;
+    // TODO: move this to content
+  }
 }
 
 .popup__close{
@@ -58,6 +74,11 @@
 .popup__image {
   // box model
   display: none;
+
+  @include atTablet768 {
+    // box model
+    display: block;
+  }
 }
 
 .popup__image img {
@@ -109,7 +130,7 @@
 .popup__list {
   // box model
   margin: 0;
-  padding-left: 1.4rem;
+  padding: 0;
 }
 
 .popup__item {
@@ -120,4 +141,17 @@
   font-size: 1.5rem;
   letter-spacing: 0.06em;
   line-height: 1.1;
+
+  // visual
+  list-style: none;
+}
+
+.popup__item::before {
+  content: '\2022';
+
+  // box model
+  margin-right: 0.5em;
+
+  // typography
+  color: var(--primary);
 }
