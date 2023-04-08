@@ -1703,10 +1703,10 @@ a.main-menu__link:hover {
 .popup__window {
   position: relative;
   z-index: 2;
-  padding: 1rem;
   max-width: 90rem;
   border-radius: 0.9rem;
   background-color: var(--lightS);
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .popup__window {
@@ -1729,7 +1729,20 @@ a.main-menu__link:hover {
 @media (min-width: 768px) {
   .popup__image {
     display: block;
+    height: 35rem;
+    width: 35rem;
+    flex-shrink: 0;
+    font-size: 0;
   }
+}
+
+.popup__image img {
+  height: 100%;
+  width: 100%;
+}
+
+.popup__content {
+  padding: 1rem;
 }
 
 .popup__title {
@@ -1741,6 +1754,11 @@ a.main-menu__link:hover {
   line-height: 1.3;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .popup__title {
+    text-align: left;
+  }
+}
 
 .popup__subtitle {
   margin: 0;
@@ -1751,6 +1769,11 @@ a.main-menu__link:hover {
   line-height: 1.15;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .popup__subtitle {
+    text-align: left;
+  }
+}
 
 .popup__description {
   margin: 0;
@@ -1759,6 +1782,12 @@ a.main-menu__link:hover {
   letter-spacing: 0.06em;
   line-height: 1.1;
   text-align: justify;
+}
+@media (min-width: 768px) {
+  .popup__description {
+    margin-bottom: 2rem;
+    text-align: left;
+  }
 }
 
 .popup__list {

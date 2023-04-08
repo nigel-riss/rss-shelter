@@ -45,7 +45,6 @@
   z-index: 2;
 
   // box model
-  padding: 1rem;
   max-width: 90rem;
 
   // border
@@ -53,6 +52,7 @@
 
   // visual
   background-color: var(--lightS);
+  overflow: hidden;
 
   @include atTablet768 {
     // box model
@@ -78,15 +78,24 @@
   @include atTablet768 {
     // box model
     display: block;
+    height: 35rem;
+    width: 35rem;
+    flex-shrink: 0;
+
+    // typography
+    font-size: 0;
   }
 }
 
 .popup__image img {
-
+  // box model
+  height: 100%;
+  width: 100%;
 }
 
 .popup__content {
-
+  // box model
+  padding: 1rem;
 }
 
 .popup__title {
@@ -100,6 +109,11 @@
   letter-spacing: 0.06em;
   line-height: 1.3;
   text-align: center;
+
+  @include atTablet768 {
+    // typography
+    text-align: left;
+  }
 }
 
 .popup__subtitle {
@@ -113,6 +127,11 @@
   letter-spacing: 0.06em;
   line-height: 1.15;
   text-align: center;
+
+  @include atTablet768 {
+    // typography
+    text-align: left;
+  }
 }
 
 .popup__description {
@@ -125,6 +144,14 @@
   letter-spacing: 0.06em;
   line-height: 1.1;
   text-align: justify;
+
+  @include atTablet768 {
+    // box model
+    margin-bottom: 2rem;
+
+    // typography
+    text-align: left;
+  }
 }
 
 .popup__list {
