@@ -28,3 +28,11 @@
   // visual
   background-color: var(--primaryLight);
 }
+
+.ghost-button:active {
+  // border
+  border-color: var(--primary);
+
+  // visual
+  background-color: var(--primary);
+}

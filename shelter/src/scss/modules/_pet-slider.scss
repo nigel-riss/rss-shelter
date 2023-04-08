@@ -77,27 +77,7 @@
   }
 }
 
-.pet-slider__button {
-  // box model
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 5.2rem;
-  width: 5.2rem;
-
-  // border
-  border-radius: 50%;
-  border: 2px solid var(--primary);
-
+.pet-slider__controls button {
   // visual
-  transition: all 0.25s ease-out;
   pointer-events: all;
-}
-
-.pet-slider__button:hover {
-  // border
-  border-color: var(--primaryLight);
-
-  // visual
-  background-color: var(--primaryLight);
 }

@@ -8,15 +8,13 @@
   z-index: 11;
 
   // box model
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   padding: 0 4rem;
 
   // typography
   font-family: var(--titleFont);
-
-  // visual
 
   @include atTablet {
     // box model
@@ -25,9 +23,13 @@
 
   @include atDesktopS {
     // box model
-    // display: none;
     padding: 0;
   }
+}
+
+.popup--open {
+  // box model
+  display: flex;
 }
 
 .popup__backdrop {
@@ -51,24 +53,42 @@
   z-index: 2;
 
   // box model
-  max-width: 90rem;
+  max-width: 40rem;
 
   // border
   border-radius: 0.9rem;
 
   // visual
   background-color: var(--lightS);
-  overflow: hidden;
+  // overflow: hidden;
 
   @include atTablet768 {
     // box model
     display: flex;
+    max-width: 61.5rem;
+  }
+
+  @include atDesktopS {
+    // box model
+    max-width: 90rem;
   }
 }
 
 .popup__close{
   // positioning
   position: absolute;
+  top: -5.2rem;
+  right: -3rem;
+
+  @include atTablet768 {
+    // positioning
+    right: -4.1rem;
+  }
+
+  @include atDesktopS {
+    // positioning
+    right: -4.2rem;
+  }
 }
 
 .popup__image {
