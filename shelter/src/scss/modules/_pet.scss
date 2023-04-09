@@ -26,6 +26,10 @@
   background-color: var(--primaryLight);
 }
 
+.pet * {
+  pointer-events: none;
+}
+
 .pet__image {
   // box model
   height: 27rem;

@@ -1049,6 +1049,10 @@ a.main-menu__link:hover {
   background-color: var(--primaryLight);
 }
 
+.pet * {
+  pointer-events: none;
+}
+
 .pet__image {
   height: 27rem;
   font-size: 0;
@@ -1651,11 +1655,14 @@ a.main-menu__link:hover {
   bottom: 0;
   left: 0;
   z-index: 11;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 4rem;
   font-family: var(--titleFont);
+  overflow: hidden;
+  pointer-events: none;
+  visibility: hidden;
 }
 @media (min-width: 600px) {
   .popup {
@@ -1668,10 +1675,6 @@ a.main-menu__link:hover {
   }
 }
 
-.popup--open {
-  display: flex;
-}
-
 .popup__backdrop {
   position: absolute;
   top: 0;
@@ -1679,16 +1682,18 @@ a.main-menu__link:hover {
   bottom: 0;
   left: 0;
   z-index: 1;
-  background-color: var(--dark3XL60);
+  background-color: transparent;
   transition: all 0.5s ease-out;
 }
 
 .popup__window {
   position: relative;
   z-index: 2;
+  transform: translateX(-100vw);
   max-width: 40rem;
   border-radius: 0.9rem;
   background-color: var(--lightS);
+  transition: all 0.5s ease-out;
 }
 @media (min-width: 768px) {
   .popup__window {
@@ -1727,7 +1732,10 @@ a.main-menu__link:hover {
     height: 35rem;
     width: 35rem;
     flex-shrink: 0;
+    border-top-left-radius: 0.9rem;
+    border-bottom-left-radius: 0.9rem;
     font-size: 0;
+    overflow: hidden;
   }
 }
 @media (min-width: 1200px) {
@@ -1832,6 +1840,18 @@ a.main-menu__link:hover {
   content: "•";
   margin-right: 0.5em;
   color: var(--primary);
+}
+
+.popup--open {
+  display: flex;
+  pointer-events: all;
+  visibility: visible;
+}
+.popup--open .popup__backdrop {
+  background-color: var(--dark3XL60);
+}
+.popup--open .popup__window {
+  transform: translateX(0);
 }
 
 .circle-button {

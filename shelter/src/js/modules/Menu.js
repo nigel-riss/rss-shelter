@@ -19,7 +19,6 @@ class Menu {
     })
 
     this.menu && this.menu.addEventListener(`click`, (e) => {
-      console.log(e.target.classList)
       if (e.target.classList.contains(`main-menu__link`)) {
         this._toggleNav()
       }

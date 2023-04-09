@@ -8,13 +8,18 @@
   z-index: 11;
 
   // box model
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 4rem;
 
   // typography
   font-family: var(--titleFont);
+
+  // visual
+  overflow: hidden;
+  pointer-events: none;
+  visibility: hidden;
 
   @include atTablet {
     // box model
@@ -27,30 +32,15 @@
   }
 }
 
-.popup--open {
-  // box model
-  display: flex;
-}
-
 .popup__backdrop {
-  // @include backdrop;
-  // positioning
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-
-  // visual
-  background-color: var(--dark3XL60);
-  transition: all 0.5s ease-out;
+  @include backdrop;
 }
 
 .popup__window {
   // positioning
   position: relative;
   z-index: 2;
+  transform: translateX(-100vw);
 
   // box model
   max-width: 40rem;
@@ -60,7 +50,7 @@
 
   // visual
   background-color: var(--lightS);
-  // overflow: hidden;
+  transition: all 0.5s ease-out;
 
   @include atTablet768 {
     // box model
@@ -102,8 +92,15 @@
     width: 35rem;
     flex-shrink: 0;
 
+    // border
+    border-top-left-radius: 0.9rem;
+    border-bottom-left-radius: 0.9rem;
+
     // typography
     font-size: 0;
+
+    // visual
+    overflow: hidden;
   }
 
   @include atDesktopS {
@@ -235,4 +232,23 @@
 
   // typography
   color: var(--primary);
+}
+
+.popup--open {
+  // box model
+  display: flex;
+
+  // visual
+  pointer-events: all;
+  visibility: visible;
+
+  .popup__backdrop {
+    // visual
+    background-color: var(--dark3XL60);
+  }
+
+  .popup__window {
+    // positioning
+    transform: translateX(0);
+  }
 }

@@ -1,5 +1,6 @@
 const cards = [
   {
+    id: `jennifer`,
     name: `Jennifer`,
     img: `jennifer.png`,
     type: `Dog`,
@@ -11,6 +12,7 @@ const cards = [
     parasites: [`none`]
   },
   {
+    id: `sophia`,
     name: `Sophia`,
     img: `sophia.png`,
     type: `Dog`,
@@ -22,6 +24,7 @@ const cards = [
     parasites: [`none`]
   },
   {
+    id: `woody`,
     name: `Woody`,
     img: `woody.png`,
     type: `Dog`,
@@ -33,6 +36,7 @@ const cards = [
     parasites: [`none`]
   },
   {
+    id: `scarlett`,
     name: `Scarlett`,
     img: `scarlett.png`,
     type: `Dog`,
@@ -44,6 +48,7 @@ const cards = [
     parasites: [`none`]
   },
   {
+    id: `katrine`,
     name: `Katrine`,
     img: `katrine.png`,
     type: `Cat`,
@@ -55,6 +60,7 @@ const cards = [
     parasites: [`none`]
   },
   {
+    id: `timmy`,
     name: `Timmy`,
     img: `timmy.png`,
     type: `Cat`,
@@ -66,6 +72,7 @@ const cards = [
     parasites: [`none`]
   },
   {
+    id: `freddie`,
     name: `Freddie`,
     img: `freddie.png`,
     type: `Cat`,
@@ -77,6 +84,7 @@ const cards = [
     parasites: [`none`]
   },
   {
+    id: `charly`,
     name: `Charly`,
     img: `charly.png`,
     type: `Dog`,
