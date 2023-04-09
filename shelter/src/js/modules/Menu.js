@@ -9,16 +9,16 @@ class Menu {
   }
   
   _initListeners() {
-    this.button && this.button.addEventListener(`click`, () => {
+    this?.button.addEventListener(`click`, () => {
       this._toggleNav()
     })
 
     this.nav && (this.backdrop = document.querySelector(`.header-nav__backdrop`))
-    this.backdrop && this.backdrop.addEventListener(`click`, () => {
+    this?.backdrop.addEventListener(`click`, () => {
       this._toggleNav()
     })
 
-    this.menu && this.menu.addEventListener(`click`, (e) => {
+    this?.menu.addEventListener(`click`, (e) => {
       if (e.target.classList.contains(`main-menu__link`)) {
         this._toggleNav()
       }
