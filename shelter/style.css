@@ -510,7 +510,7 @@ body {
 .header-nav--open {
   pointer-events: all;
 }
-.header-nav--open .header-nav__overlay {
+.header-nav--open .header-nav__backdrop {
   background-color: var(--dark3XL60);
 }
 .header-nav--open .header-nav__menu {

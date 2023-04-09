@@ -13,8 +13,8 @@ class Menu {
       this._toggleNav()
     })
 
-    this.nav && (this.overlay = document.querySelector(`.header-nav__overlay`))
-    this.overlay && this.overlay.addEventListener(`click`, () => {
+    this.nav && (this.backdrop = document.querySelector(`.header-nav__backdrop`))
+    this.backdrop && this.backdrop.addEventListener(`click`, () => {
       this._toggleNav()
     })
 
