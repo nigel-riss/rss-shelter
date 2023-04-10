@@ -8,10 +8,10 @@ class Slider {
     this.rightButton = this.slider.querySelector(`#pet-slider__right`)
     this.slidesContainer = this.slider.querySelector(`.pet-slider__slides`)
 
-    console.log(this.slidesContainer)
+    this.isEnabledControls = true
 
     this._updateLimits()
-    this._renderCards()
+    this._renderCards(true)
     this._resetPosition()
     this._initListeners()
   }
@@ -24,6 +24,7 @@ class Slider {
       this._updateLimits()
       this._renderCards()
       this._resetPosition()
+      this.isEnabledControls = true
     })
   }
 
@@ -51,13 +52,15 @@ class Slider {
     }
   }
 
-  _renderCards() {
+  _renderCards(isRenderNew = false, newMainOrder) {
+    const cardsOrder = this._getCardsOrder(isRenderNew, newMainOrder)
+
     let slidesHTML = ``
 
     for (let i = 0; i < 3; i++) {
       let cardsHTML = ``
       for (let j = 0; j < this.cardsPerSlide; j++) {
-        cardsHTML += this._getCardHTML(cards[Math.floor(Math.random() * 8)])
+        cardsHTML += this._getCardHTML(cards[cardsOrder[i * 3 + j]])
       }
 
       slidesHTML += `
@@ -90,16 +93,74 @@ class Slider {
     return cardHTML
   }
 
+  _getCardsOrder(isRegenerate = false, newMainOrder) {
+    const getIndexPool = () => new Array(8)
+      .fill(null)
+      .map((_el, i) => i)
+
+    const getRandomItemFromPool = (pool, bans) => {
+      let randomIndex = null
+
+      do {
+        randomIndex = Math.floor(Math.random() * pool.length)
+      } while(bans.includes(pool[randomIndex]))
+
+      return pool.splice(randomIndex, 1)[0]
+    }
+
+    if (isRegenerate) {
+      const getRandomOrderOf3 = (pool, bans) => new Array(3)
+        .fill(null)
+        .map(() => getRandomItemFromPool(pool, bans))
+  
+  
+      const indexPool = getIndexPool()
+      this.mainCardsOrder = newMainOrder || getRandomOrderOf3(
+        indexPool,
+        [],
+      )
+  
+      this.sideCardsOrder = getRandomOrderOf3(
+        indexPool,
+        this.mainCardsOrder
+      )
+    }
+
+    return [...this.sideCardsOrder, ...this.mainCardsOrder, ...this.sideCardsOrder]
+  }
+
   _resetPosition() {
+    this.slidesContainer.style.transitionDuration = `0s`
     this.slidesContainer.style.left = this.centerShift
+    setTimeout(() => {
+      this.slidesContainer.style.transitionDuration = `0.5s`
+    }, 10)
   }
 
   slideLeft() {
-    this.slidesContainer.style.left = this.leftShift
+    if (this.isEnabledControls) {
+      this.isEnabledControls = false
+      this.slidesContainer.style.left = this.leftShift
+
+      setTimeout(() => {
+        this.isEnabledControls = true
+        this._resetPosition()
+        this._renderCards(true, this.sideCardsOrder)
+      }, 500)
+    }
   }
 
   slideRight() {
-    this.slidesContainer.style.left = this.rightShift
+    if (this.isEnabledControls) {
+      this.isEnabledControls = false
+      this.slidesContainer.style.left = this.rightShift
+
+      setTimeout(() => {
+        this.isEnabledControls = true
+        this._resetPosition()
+        this._renderCards(true, this.sideCardsOrder)
+      }, 500)
+    }
   }
 }
 
