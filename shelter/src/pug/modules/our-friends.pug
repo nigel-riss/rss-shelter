@@ -3,33 +3,79 @@ section#our-friends.our-friends
     header.our-friends__header
       h2.section-title Our friends who <br>are looking for a house
     .our-friends__content 
-      .pet-slider
+      #pet-slider.pet-slider
         .pet-slider__content
-          article.pet(data-name='katrine')
-            .pet__image
-              img(src="./img/pets/katrine.png", alt="Katrine")
-            .pet__caption
-              h3.pet__title Katrine
-              .pet__more
-                a.ghost-button(href="#") Learn more
-          article.pet(data-name='jennifer')
-            .pet__image
-              img(src="./img/pets/jennifer.png", alt="Jennifer")
-            .pet__caption
-              h3.pet__title Jennifer
-              .pet__more
-                a.ghost-button(href="#") Learn more
-          article.pet(data-name='woody')
-            .pet__image
-              img(src="./img/pets/woody.png", alt="Woody")
-            .pet__caption
-              h3.pet__title Woody
-              .pet__more
-                a.ghost-button(href="#") Learn more
+          .pet-slider__slides
+            .pet-slider__slide
+              article.pet(data-name='katrine')
+                .pet__image
+                  img(src="./img/pets/katrine.png", alt="Katrine")
+                .pet__caption
+                  h3.pet__title Katrine
+                  .pet__more
+                    a.ghost-button(href="#") Learn more
+              article.pet(data-name='katrine')
+                .pet__image
+                  img(src="./img/pets/katrine.png", alt="Katrine")
+                .pet__caption
+                  h3.pet__title Katrine
+                  .pet__more
+                    a.ghost-button(href="#") Learn more
+              article.pet(data-name='katrine')
+                .pet__image
+                  img(src="./img/pets/katrine.png", alt="Katrine")
+                .pet__caption
+                  h3.pet__title Katrine
+                  .pet__more
+                    a.ghost-button(href="#") Learn more
+            .pet-slider__slide
+              article.pet(data-name='jennifer')
+                .pet__image
+                  img(src="./img/pets/jennifer.png", alt="Jennifer")
+                .pet__caption
+                  h3.pet__title Jennifer
+                  .pet__more
+                    a.ghost-button(href="#") Learn more
+              article.pet(data-name='jennifer')
+                .pet__image
+                  img(src="./img/pets/jennifer.png", alt="Jennifer")
+                .pet__caption
+                  h3.pet__title Jennifer
+                  .pet__more
+                    a.ghost-button(href="#") Learn more
+              article.pet(data-name='jennifer')
+                .pet__image
+                  img(src="./img/pets/jennifer.png", alt="Jennifer")
+                .pet__caption
+                  h3.pet__title Jennifer
+                  .pet__more
+                    a.ghost-button(href="#") Learn more
+            .pet-slider__slide
+              article.pet(data-name='woody')
+                .pet__image
+                  img(src="./img/pets/woody.png", alt="Woody")
+                .pet__caption
+                  h3.pet__title Woody
+                  .pet__more
+                    a.ghost-button(href="#") Learn more
+              article.pet(data-name='woody')
+                .pet__image
+                  img(src="./img/pets/woody.png", alt="Woody")
+                .pet__caption
+                  h3.pet__title Woody
+                  .pet__more
+                    a.ghost-button(href="#") Learn more
+              article.pet(data-name='woody')
+                .pet__image
+                  img(src="./img/pets/woody.png", alt="Woody")
+                .pet__caption
+                  h3.pet__title Woody
+                  .pet__more
+                    a.ghost-button(href="#") Learn more
         .pet-slider__controls
-          button.circle-button
+          button#pet-slider__left.circle-button
             img(src="./img/icons/arr-l.svg", alt="left")
-          button.circle-button
+          button#pet-slider__right.circle-button
             img(src="./img/icons/arr-r.svg", alt="right")
     .our-friends__cta
       a.button(href="pets.html") Get to know the rest

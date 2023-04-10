@@ -5,4 +5,4 @@ import { Pagination } from './modules/Pagination.js'
 
 const _menu = new Menu()
 const _popup = new Popup()
-window._pagination = new Pagination()
+const _pagination = new Pagination()

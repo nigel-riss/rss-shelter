@@ -1,6 +1,8 @@
 .pet {
   // box model
   width: 27rem;
+  flex-grow: 0;
+  flex-shrink: 0;
 
   // border
   border-radius: 0.9rem;
