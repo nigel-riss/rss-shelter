@@ -6,10 +6,14 @@ const BACKWARD_ID = `backward`
 const FORWARD_ID = `forward`
 const FAST_FORWARD_ID = `fast-forward`
 
+const TOTAL_CARDS = 48
+
 
 class Pagination {
   constructor() {
     this.currPageNum = 1
+    this.cardsPerPage = 8
+    this.cardsOrder = this._getCardsOrder()
 
     this.container = document.getElementById(`all-friends`)
     this.contentContainer = this.container
@@ -90,11 +94,57 @@ class Pagination {
     return cardHTML
   }
 
+  _getCardsOrder() {
+    const getIndexPool = () => new Array(8)
+      .fill(null)
+      .map((_el, i) => i)
+
+    const getRandomItemFromPool = (pool, bans) => {
+      let randomIndex = null
+
+      do {
+        randomIndex = Math.floor(Math.random() * pool.length)
+      } while(bans.includes(pool[randomIndex]))
+
+      return pool.splice(randomIndex, 1)[0]
+    }
+
+    let cardsOrder = []
+    let sixCardsOrder = []
+    let indexPool = getIndexPool()
+
+    while (cardsOrder.length < TOTAL_CARDS) {
+      if (!indexPool.length) {
+        indexPool = getIndexPool()
+      }
+
+      sixCardsOrder.push(getRandomItemFromPool(
+        indexPool,
+        sixCardsOrder,
+      ))
+
+      if (sixCardsOrder.length === 6) {
+        cardsOrder = [...cardsOrder, ...sixCardsOrder]
+        sixCardsOrder = []
+      }
+    }
+
+    return cardsOrder
+  }
+
   _updatePagination(pageNum, maxPage) {
     this.paginationContainer.innerHTML = this._getControls(pageNum, maxPage)
 
+    const cardsHTML = this.cardsOrder
+      .slice(
+        (pageNum - 1) * this.cardsPerPage,
+        pageNum * this.cardsPerPage,
+      )
+      .reduce((html, cardIndex) => {
+        return html + this._getCard(cards[cardIndex])
+      }, ``)
 
-    console.log(this.currPageNum)
+    this.contentContainer.innerHTML = cardsHTML
   }
 
   openFirstPage() {
