@@ -67,28 +67,6 @@
   }
 }
 
-.all-friends__content .pet {
-  // box model
-  display: none;
-
-  &:nth-of-type(-n + 3) {
-    // box model
-    display: block;
-  }
-
-  @include atTablet {
-    &:nth-of-type(-n + 6) {
-      // box model
-      display: block;
-    }
-  }
-
-  @include atDesktopS {
-    // box model
-    display: block;
-  }
-}
-
 .all-friends__cta {
   // box model
   display: flex;

@@ -1592,23 +1592,6 @@ a.main-menu__link:hover {
   }
 }
 
-.all-friends__content .pet {
-  display: none;
-}
-.all-friends__content .pet:nth-of-type(-n + 3) {
-  display: block;
-}
-@media (min-width: 600px) {
-  .all-friends__content .pet:nth-of-type(-n + 6) {
-    display: block;
-  }
-}
-@media (min-width: 1200px) {
-  .all-friends__content .pet {
-    display: block;
-  }
-}
-
 .all-friends__cta {
   display: flex;
   justify-content: center;

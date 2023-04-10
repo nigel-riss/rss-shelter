@@ -11,8 +11,9 @@ const TOTAL_CARDS = 48
 
 class Pagination {
   constructor() {
-    this.currPageNum = 1
+    this.currPage = 1
     this.cardsPerPage = 8
+    this.maxPage = 6
     this.cardsOrder = this._getCardsOrder()
 
     this.container = document.getElementById(`all-friends`)
@@ -21,8 +22,31 @@ class Pagination {
     this.paginationContainer = this.container
       ?.querySelector(`.all-friends__pagination`)
 
-    this._updatePagination(1, 6)
+    this._updateLimits()
+    this._updatePagination(1, this.maxPage)
     this._initListeners()
+  }
+
+  _updateLimits() {
+    const isTabletPlus = window.matchMedia(`(min-width: 600px)`).matches
+    const isDesktopPlus = window.matchMedia(`(min-width: 1200px)`).matches
+
+    this.cardsPerPage = 3
+    this.maxPage = 16
+
+    if (isTabletPlus) {
+      this.cardsPerPage = 6
+      this.maxPage = 8
+    }
+
+    if (isDesktopPlus) {
+      this.cardsPerPage = 8
+      this.maxPage = 6
+    }
+
+    if (this.currPage > this.maxPage) {
+      this.currPage = this.maxPage
+    }
   }
 
   _initListeners() {
@@ -32,9 +56,14 @@ class Pagination {
       if (e.target.id === FORWARD_ID) this.openNextPage()
       if (e.target.id === FAST_FORWARD_ID) this.openLastPage()
     })
+
+    window.addEventListener(`resize`, () => {
+      this._updateLimits()
+      this._updatePagination(this.currPage, this.maxPage)
+    })
   }
 
-  _getControls(pageNum, maxPageNum) {
+  _getControls(pageNum, maxPage) {
     const controlsHTML = `
       <ul class="pagination">
         <li class="pagination__item">
@@ -58,14 +87,14 @@ class Pagination {
           <button
             id="${FORWARD_ID}"
             class="circle-button"
-            ${pageNum === maxPageNum && `disabled`}
+            ${pageNum === maxPage && `disabled`}
           >&gt;</button>
         </li>
         <li class="pagination__item">
           <button
             id="${FAST_FORWARD_ID}"
             class="circle-button"
-            ${pageNum === maxPageNum && `disabled`}
+            ${pageNum === maxPage && `disabled`}
           >&gt;&gt;</button>
         </li>
       </ul>
@@ -148,33 +177,29 @@ class Pagination {
   }
 
   openFirstPage() {
-    this.currPageNum = 1
-
-    this._updatePagination(this.currPageNum, 6)
+    this.currPage = 1
+    this._updatePagination(this.currPage, this.maxPage)
   }
 
   openPrevPage() {
-    this.currPageNum--
-    if (this.currPageNum === 0) {
-      this.currPageNum = 1
+    this.currPage--
+    if (this.currPage === 0) {
+      this.currPage = 1
     }
-
-    this._updatePagination(this.currPageNum, 6)
+    this._updatePagination(this.currPage, this.maxPage)
   }
 
   openNextPage() {
-    this.currPageNum++
-    if (this.currPageNum === 7) {
-      this.currPageNum = 6
+    this.currPage++
+    if (this.currPage === this.maxPage + 1) {
+      this.currPage = this.maxPage
     }
-
-    this._updatePagination(this.currPageNum, 6)
+    this._updatePagination(this.currPage, this.maxPage)
   }
 
   openLastPage() {
-    this.currPageNum = 6
-
-    this._updatePagination(this.currPageNum, 6)
+    this.currPage = this.maxPage
+    this._updatePagination(this.currPage, this.maxPage)
   }
 }
 
