@@ -70,7 +70,7 @@ class Popup {
       parasites,
     } = data
 
-    const popupHtml = `
+    const popupHTML = `
       <div class="popup__close">
         <button class="circle-button"><img src="./img/icons/close.svg" alt="close"></button>
       </div>
@@ -88,7 +88,7 @@ class Popup {
       </div>
     `
 
-    this.window.innerHTML = popupHtml
+    this.window.innerHTML = popupHTML
   }
 }
 
