@@ -1578,17 +1578,22 @@ a.main-menu__link:hover {
 @media (min-width: 768px) {
   .all-friends__content {
     margin-bottom: 4rem;
-    padding: 0 9.4rem;
+    padding: 0 8.6rem;
   }
 }
 @media (min-width: 1200px) {
   .all-friends__content {
-    column-gap: 4rem;
+    column-gap: 3.5rem;
     row-gap: 3rem;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     margin-bottom: 6rem;
     padding: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .all-friends__content {
+    column-gap: 4rem;
   }
 }
 
@@ -1845,8 +1850,6 @@ a.main-menu__link:hover {
   width: 5.2rem;
   margin: 0;
   padding: 0;
-  padding-bottom: 0.1rem;
-  padding-left: 0.1rem;
   border-radius: 50%;
   border: 2px solid var(--primary);
   color: var(--dark3XL);

@@ -40,7 +40,7 @@
 
 // Medium Desktop and Generic Laptops
 @mixin atDesktopM {
-  @media (min-width: 1400px) {
+  @media (min-width: 1280px) {
     @content;
   }
 }
