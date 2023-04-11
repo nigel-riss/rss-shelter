@@ -130,11 +130,12 @@ class Slider {
   }
 
   _resetPosition() {
-    // this.slidesContainer.style.transitionDuration = `0s`
+    this.slidesContainer.classList.add(`pet-slider__slides--not-animated`)
     this.slidesContainer.style.left = this.centerShift
-    setTimeout(() => {
-      // this.slidesContainer.style.transitionDuration = `0.5s`
-    }, 10)
+    window.requestAnimationFrame(() => {
+      this.slidesContainer.classList.remove(`pet-slider__slides--not-animated`)
+      this.isEnabledControls = true
+    })
   }
 
   slideLeft() {
@@ -143,7 +144,6 @@ class Slider {
       this.slidesContainer.style.left = this.leftShift
 
       setTimeout(() => {
-        this.isEnabledControls = true
         this._resetPosition()
         this._renderCards(true, this.sideCardsOrder)
       }, 500)
@@ -156,7 +156,6 @@ class Slider {
       this.slidesContainer.style.left = this.rightShift
 
       setTimeout(() => {
-        this.isEnabledControls = true
         this._resetPosition()
         this._renderCards(true, this.sideCardsOrder)
       }, 500)

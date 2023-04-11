@@ -40,6 +40,7 @@
   padding: 0 2rem;
 
   // visual
+  transition: all 0.5s ease-out;
 
   @include atTablet768 {
     // positioning
@@ -58,6 +59,11 @@
     gap: 9rem;
     padding: 0 9rem;
   }
+}
+
+.pet-slider__slides--not-animated {
+  // visual
+  transition: none !important;
 }
 
 .pet-slider__slide {
