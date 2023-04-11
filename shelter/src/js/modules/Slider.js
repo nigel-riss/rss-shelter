@@ -130,10 +130,10 @@ class Slider {
   }
 
   _resetPosition() {
-    this.slidesContainer.style.transitionDuration = `0s`
+    // this.slidesContainer.style.transitionDuration = `0s`
     this.slidesContainer.style.left = this.centerShift
     setTimeout(() => {
-      this.slidesContainer.style.transitionDuration = `0.5s`
+      // this.slidesContainer.style.transitionDuration = `0.5s`
     }, 10)
   }
 

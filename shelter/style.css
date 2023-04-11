@@ -993,7 +993,6 @@ a.main-menu__link:hover {
   justify-content: center;
   gap: 2rem;
   padding: 0 2rem;
-  transition: all 0.5s ease-out;
 }
 @media (min-width: 768px) {
   .pet-slider__slides {
