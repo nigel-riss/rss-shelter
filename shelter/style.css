@@ -1032,6 +1032,23 @@ a.main-menu__link:hover {
   }
 }
 
+.pet-slider__slide .pet {
+  display: none;
+}
+.pet-slider__slide .pet:first-of-type {
+  display: block;
+}
+@media (min-width: 768px) {
+  .pet-slider__slide .pet:nth-last-of-type(2) {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .pet-slider__slide .pet {
+    display: block;
+  }
+}
+
 .pet-slider__controls {
   display: flex;
   justify-content: space-between;

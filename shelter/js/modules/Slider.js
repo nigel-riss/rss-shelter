@@ -32,20 +32,17 @@ class Slider {
     const isTabletPlus = window.matchMedia(`(min-width: 768px)`).matches
     const isDesktopPlus = window.matchMedia(`(min-width: 1200px)`).matches
 
-    this.cardsPerSlide = 1
     this.leftShift = `-59.5rem`
     this.centerShift = `-30.5rem`
     this.rightShift = `-1.5rem`
 
     if (isTabletPlus) {
-      this.cardsPerSlide = 2
       this.leftShift = `-127.5rem`
       this.centerShift = `-65.5rem`
       this.rightShift = `-3.5rem`
     }
 
     if (isDesktopPlus) {
-      this.cardsPerSlide = 3
       this.leftShift = `-224.5rem`
       this.centerShift = `-116.5rem`
       this.rightShift = `-8.5rem`
@@ -59,7 +56,7 @@ class Slider {
 
     for (let i = 0; i < 3; i++) {
       let cardsHTML = ``
-      for (let j = 0; j < this.cardsPerSlide; j++) {
+      for (let j = 0; j < 3; j++) {
         cardsHTML += this._getCardHTML(cards[cardsOrder[i * 3 + j]])
       }
 

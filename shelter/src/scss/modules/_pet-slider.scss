@@ -87,8 +87,25 @@
 }
 
 .pet-slider__slide .pet {
-  // box model  
-  // border: 2px solid fuchsia;
+  // box model
+  display: none;
+
+  &:first-of-type {
+    // box model
+    display: block;
+  }
+
+  @include atTablet768 {
+    &:nth-last-of-type(2) {
+      // box model
+      display: block;
+    }
+  }
+
+  @include atDesktopS {
+    // box model
+    display: block;
+  }
 }
 
 .pet-slider__controls {
