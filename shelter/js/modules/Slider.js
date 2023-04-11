@@ -132,6 +132,7 @@ class Slider {
   _resetPosition() {
     this.slidesContainer.classList.add(`pet-slider__slides--not-animated`)
     this.slidesContainer.style.left = this.centerShift
+    const __dummyHack = this.slidesContainer.offsetWidth
     window.requestAnimationFrame(() => {
       this.slidesContainer.classList.remove(`pet-slider__slides--not-animated`)
       this.isEnabledControls = true
