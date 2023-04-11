@@ -15,12 +15,12 @@ class Menu {
 
     this.nav && (this.backdrop = document.querySelector(`.header-nav__backdrop`))
     this.backdrop?.addEventListener(`click`, () => {
-      this._toggleNav()
+      this._closeNav()
     })
 
     this.menu?.addEventListener(`click`, (e) => {
       if (e.target.classList.contains(`main-menu__link`)) {
-        this._toggleNav()
+        this._closeNav()
       }
     })
   }
@@ -31,6 +31,13 @@ class Menu {
 
   _enableScroll() {
     document.body.style.overflow = `visible`
+  }
+
+  _closeNav() {
+    this.isOpen = false
+    this._enableScroll()
+    this.button.classList.remove(`menu-button--open`)
+    this.nav.classList.remove(`header-nav--open`)
   }
 
   _toggleNav() {

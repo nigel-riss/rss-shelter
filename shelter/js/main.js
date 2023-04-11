@@ -5,4 +5,4 @@ import { Slider } from './modules/Slider.js'
 
 const _menu = new Menu()
 const _popup = new Popup()
-window._slider = new Slider()
+const _slider = new Slider()

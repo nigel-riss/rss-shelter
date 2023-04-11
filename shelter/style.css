@@ -1696,6 +1696,7 @@ a.main-menu__link:hover {
   align-items: center;
   padding: 0 4rem;
   font-family: var(--titleFont);
+  opacity: 0;
   overflow: hidden;
   pointer-events: none;
   visibility: hidden;
@@ -1720,6 +1721,7 @@ a.main-menu__link:hover {
   z-index: 1;
   background-color: transparent;
   transition: all 0.5s ease-out;
+  opacity: 0;
 }
 
 .popup__window {
@@ -1880,11 +1882,13 @@ a.main-menu__link:hover {
 
 .popup--open {
   display: flex;
+  opacity: 1;
   pointer-events: all;
   visibility: visible;
 }
 .popup--open .popup__backdrop {
   background-color: var(--dark3XL60);
+  opacity: 1;
 }
 .popup--open .popup__window {
   transform: translateX(0);
