@@ -1,6 +1,10 @@
 import { cards } from '../utils/cards.js';
 
 
+const SHIFT_LEFT = `LEFT`
+const SHIFT_RIGHT = `RIGHT`
+
+
 class Slider {
   constructor() {
     this.slider = document.getElementById(`pet-slider`)
@@ -11,7 +15,7 @@ class Slider {
     this.isEnabledControls = true
 
     this._updateLimits()
-    this._renderCards(true)
+    this._renderCards()
     this._resetPosition()
     this._initListeners()
   }
@@ -22,7 +26,6 @@ class Slider {
 
     window.addEventListener(`resize`, () => {
       this._updateLimits()
-      this._renderCards()
       this._resetPosition()
       this.isEnabledControls = true
     })
@@ -49,8 +52,8 @@ class Slider {
     }
   }
 
-  _renderCards(isRenderNew = false, newMainOrder) {
-    const cardsOrder = this._getCardsOrder(isRenderNew, newMainOrder)
+  _renderCards(shift) {
+    const cardsOrder = this._getCardsOrder(shift)
 
     let slidesHTML = ``
 
@@ -90,7 +93,8 @@ class Slider {
     return cardHTML
   }
 
-  _getCardsOrder(isRegenerate = false, newMainOrder) {
+  _getCardsOrder(shift) {
+    // Utility functions
     const getIndexPool = () => new Array(8)
       .fill(null)
       .map((_el, i) => i)
@@ -105,45 +109,55 @@ class Slider {
       return pool.splice(randomIndex, 1)[0]
     }
 
-    if (isRegenerate) {
-      const getRandomOrderOf3 = (pool, bans) => new Array(3)
-        .fill(null)
-        .map(() => getRandomItemFromPool(pool, bans))
-  
-  
-      const indexPool = getIndexPool()
-      this.mainCardsOrder = newMainOrder || getRandomOrderOf3(
-        indexPool,
-        [],
-      )
-  
-      this.sideCardsOrder = getRandomOrderOf3(
-        indexPool,
-        this.mainCardsOrder
-      )
-    }
+    const getRandomOrderOf3 = (pool, bans) => new Array(3)
+      .fill(null)
+      .map(() => getRandomItemFromPool(pool, bans))
 
-    return [...this.sideCardsOrder, ...this.mainCardsOrder, ...this.sideCardsOrder]
+    
+    let left, middle, right = null
+    const indexPool = getIndexPool()
+
+    if (!shift) {
+      middle = getRandomOrderOf3(indexPool, [])
+      left = right = getRandomOrderOf3(indexPool, [])
+    } else {
+      left = this.cardsOrder.slice(0, 3)
+      middle = this.cardsOrder.slice(3, 6)
+      right = this.cardsOrder.slice(6)
+      
+      if (shift === SHIFT_LEFT) {
+        left = middle
+        middle = right
+        right = getRandomOrderOf3(indexPool, middle)
+      }
+      
+      if (shift === SHIFT_RIGHT) {
+        right = middle
+        middle = left
+        left = getRandomOrderOf3(indexPool, middle)
+      }
+    }
+    
+    this.cardsOrder = [...left, ...middle, ...right]
+    return this.cardsOrder.slice()
   }
 
   _resetPosition() {
     this.slidesContainer.classList.add(`pet-slider__slides--not-animated`)
     this.slidesContainer.style.left = this.centerShift
     const __dummyHack = this.slidesContainer.offsetWidth
-    window.requestAnimationFrame(() => {
-      this.slidesContainer.classList.remove(`pet-slider__slides--not-animated`)
-      this.isEnabledControls = true
-    })
+    this.isEnabledControls = true
   }
 
   slideLeft() {
     if (this.isEnabledControls) {
       this.isEnabledControls = false
+      this.slidesContainer.classList.remove(`pet-slider__slides--not-animated`)
       this.slidesContainer.style.left = this.leftShift
 
       setTimeout(() => {
+        this._renderCards(SHIFT_LEFT)
         this._resetPosition()
-        this._renderCards(true, this.sideCardsOrder)
       }, 500)
     }
   }
@@ -151,11 +165,12 @@ class Slider {
   slideRight() {
     if (this.isEnabledControls) {
       this.isEnabledControls = false
+      this.slidesContainer.classList.remove(`pet-slider__slides--not-animated`)
       this.slidesContainer.style.left = this.rightShift
 
       setTimeout(() => {
+        this._renderCards(SHIFT_RIGHT)
         this._resetPosition()
-        this._renderCards(true, this.sideCardsOrder)
       }, 500)
     }
   }
