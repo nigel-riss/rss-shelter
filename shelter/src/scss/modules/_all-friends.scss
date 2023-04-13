@@ -7,7 +7,7 @@
 
   @include section;
 
-  @include atTablet760 {
+  @include atTablet768 {
     padding-bottom: 7.2rem;
   }
 
@@ -21,7 +21,7 @@
   // box model
   margin-bottom: 4.2rem;
 
-  @include atTablet760 {
+  @include atTablet768 {
     // box model
     margin-bottom: 3rem;
 
@@ -50,42 +50,25 @@
     justify-content: space-evenly;
   }
 
-  @include atTablet760 {
+  @include atTablet768 {
     // box model
     margin-bottom: 4rem;
-    padding: 0 9.4rem;
+    padding: 0 8.6rem;
   }
 
   @include atDesktopS {
     // box model
-    column-gap: 4rem;
+    column-gap: 3.5rem;
     row-gap: 3rem;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     margin-bottom: 6rem;
     padding: 0;
   }
-}
 
-.all-friends__content .pet {
-  // box model
-  display: none;
-
-  &:nth-of-type(-n + 3) {
+  @include atDesktopM {
     // box model
-    display: block;
-  }
-
-  @include atTablet {
-    &:nth-of-type(-n + 6) {
-      // box model
-      display: block;
-    }
-  }
-
-  @include atDesktopS {
-    // box model
-    display: block;
+    column-gap: 4rem;
   }
 }
 

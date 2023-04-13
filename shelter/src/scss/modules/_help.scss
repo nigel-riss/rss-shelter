@@ -9,7 +9,7 @@
   // box model
   margin-bottom: 4.2rem;
 
-  @include atTablet760 {
+  @include atTablet768 {
     // box model
     margin-bottom: 6rem;
 
@@ -19,7 +19,7 @@
 }
 
 .help__content {
-  @include atTablet760 {
+  @include atTablet768 {
     // box model
     padding: 0 6.9rem;
   }

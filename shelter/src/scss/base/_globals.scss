@@ -11,7 +11,7 @@ html {
 
   // visual
   background-color: var(--lightXL);
-  overflow-x: hidden;
+  // overflow-x: hidden;
   scroll-behavior: smooth;
 
   @include atDesktopS {
@@ -28,7 +28,7 @@ body {
   box-sizing: border-box;
 
   // visual
-  overflow-x: hidden;
+  // overflow-x: hidden;
   // text-rendering: optimizeLegibility;
   // text-rendering: optimizeSpeed;
   text-rendering: geometricPrecision;

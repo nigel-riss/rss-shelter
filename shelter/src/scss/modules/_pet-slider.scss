@@ -9,11 +9,71 @@
   z-index: 1;
 
   // box model
+  width: 28rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto;
+  
+  // visual
+  overflow: hidden;
 
-  @include atTablet760 {
+  @include atTablet768 {
+    // box model
+    width: 59rem;
+  }
+
+  @include atDesktopS {
+    // box model
+    width: 100rem;
+  }
+}
+
+.pet-slider__slides {
+  // positioning
+  position: relative;
+  left: -30.5rem;
+  
+  // box model
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 2rem;
+
+  // visual
+  transition: all 0.5s ease-out;
+
+  @include atTablet768 {
+    // positioning
+    left: -65.5rem;
+
+    // box model
+    gap: 4rem;
+    padding: 0 4rem;
+  }
+
+  @include atDesktopS {
+    // positioning
+    left: -116.5rem;
+
+    // box model
+    gap: 9rem;
+    padding: 0 9rem;
+  }
+}
+
+.pet-slider__slides--not-animated {
+  // visual
+  transition: none !important;
+}
+
+.pet-slider__slide {
+  // box model
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  // border: 2px solid blue;
+
+  @include atTablet768 {
     // box model
     flex-direction: row;
     justify-content: center;
@@ -26,8 +86,7 @@
   }
 }
 
-// TODO: remove this after part 2
-.pet-slider__content .pet {
+.pet-slider__slide .pet {
   // box model
   display: none;
 
@@ -36,7 +95,7 @@
     display: block;
   }
 
-  @include atTablet760 {
+  @include atTablet768 {
     &:nth-last-of-type(2) {
       // box model
       display: block;
@@ -77,27 +136,7 @@
   }
 }
 
-.pet-slider__button {
-  // box model
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 5.2rem;
-  width: 5.2rem;
-
-  // border
-  border-radius: 50%;
-  border: 2px solid var(--primary);
-
+.pet-slider__controls button {
   // visual
-  transition: all 0.25s ease-out;
   pointer-events: all;
-}
-
-.pet-slider__button:hover {
-  // border
-  border-color: var(--primaryLight);
-
-  // visual
-  background-color: var(--primaryLight);
 }

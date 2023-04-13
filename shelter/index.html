@@ -21,16 +21,21 @@
         <div class="header__logo"><a class="logo" href="#">
             <p class="logo__title">Cozy House</p>
             <p class="logo__subtitle">Shelter for pets in Boston</p></a></div>
-        <nav class="header__nav">
-          <ul class="main-menu">
-            <li class="main-menu__item main-menu__item--current"><span class="main-menu__link">About the shelter</span></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="pets.html">Our pets</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#help">Help the shelter</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#contacts">Contacts</a></li>
-          </ul>
+        <nav class="header-nav" id="header-nav">
+          <div class="header-nav__backdrop"></div>
+          <div class="header-nav__menu">
+            <ul class="main-menu" id="main-menu">
+              <li class="main-menu__item main-menu__item--current"><span class="main-menu__link">About the shelter</span></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="pets.html">Our pets</a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="#help">Help the shelter</a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="#contacts">Contacts</a></li>
+            </ul>
+          </div>
         </nav>
         <div class="header__menu-button">
-          <button class="menu-button"><img src="./img/icons/burger.svg" alt="🍔"></button>
+          <button class="menu-button" id="menu-button">
+            <div class="menu-button__middle">🍔</div>
+          </button>
         </div>
       </div>
     </header>
@@ -62,31 +67,84 @@
           <h2 class="section-title">Our friends who <br>are looking for a house</h2>
         </header>
         <div class="our-friends__content"> 
-          <div class="pet-slider">
+          <div class="pet-slider" id="pet-slider">
             <div class="pet-slider__content">
-              <article class="pet">
-                <div class="pet__image"><img src="./img/pets/katrine.png" alt="Katrine"></div>
-                <div class="pet__caption">
-                  <h3 class="pet__title">Katrine</h3>
-                  <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+              <div class="pet-slider__slides">
+                <div class="pet-slider__slide">
+                  <article class="pet" data-name="katrine">
+                    <div class="pet__image"><img src="./img/pets/katrine.png" alt="Katrine"></div>
+                    <div class="pet__caption">
+                      <h3 class="pet__title">Katrine</h3>
+                      <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+                    </div>
+                  </article>
+                  <article class="pet" data-name="katrine">
+                    <div class="pet__image"><img src="./img/pets/katrine.png" alt="Katrine"></div>
+                    <div class="pet__caption">
+                      <h3 class="pet__title">Katrine</h3>
+                      <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+                    </div>
+                  </article>
+                  <article class="pet" data-name="katrine">
+                    <div class="pet__image"><img src="./img/pets/katrine.png" alt="Katrine"></div>
+                    <div class="pet__caption">
+                      <h3 class="pet__title">Katrine</h3>
+                      <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+                    </div>
+                  </article>
                 </div>
-              </article>
-              <article class="pet">
-                <div class="pet__image"><img src="./img/pets/jennifer.png" alt="Jennifer"></div>
-                <div class="pet__caption">
-                  <h3 class="pet__title">Jennifer</h3>
-                  <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+                <div class="pet-slider__slide">
+                  <article class="pet" data-name="jennifer">
+                    <div class="pet__image"><img src="./img/pets/jennifer.png" alt="Jennifer"></div>
+                    <div class="pet__caption">
+                      <h3 class="pet__title">Jennifer</h3>
+                      <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+                    </div>
+                  </article>
+                  <article class="pet" data-name="jennifer">
+                    <div class="pet__image"><img src="./img/pets/jennifer.png" alt="Jennifer"></div>
+                    <div class="pet__caption">
+                      <h3 class="pet__title">Jennifer</h3>
+                      <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+                    </div>
+                  </article>
+                  <article class="pet" data-name="jennifer">
+                    <div class="pet__image"><img src="./img/pets/jennifer.png" alt="Jennifer"></div>
+                    <div class="pet__caption">
+                      <h3 class="pet__title">Jennifer</h3>
+                      <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+                    </div>
+                  </article>
                 </div>
-              </article>
-              <article class="pet">
-                <div class="pet__image"><img src="./img/pets/woody.png" alt="Woody"></div>
-                <div class="pet__caption">
-                  <h3 class="pet__title">Woody</h3>
-                  <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+                <div class="pet-slider__slide">
+                  <article class="pet" data-name="woody">
+                    <div class="pet__image"><img src="./img/pets/woody.png" alt="Woody"></div>
+                    <div class="pet__caption">
+                      <h3 class="pet__title">Woody</h3>
+                      <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+                    </div>
+                  </article>
+                  <article class="pet" data-name="woody">
+                    <div class="pet__image"><img src="./img/pets/woody.png" alt="Woody"></div>
+                    <div class="pet__caption">
+                      <h3 class="pet__title">Woody</h3>
+                      <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+                    </div>
+                  </article>
+                  <article class="pet" data-name="woody">
+                    <div class="pet__image"><img src="./img/pets/woody.png" alt="Woody"></div>
+                    <div class="pet__caption">
+                      <h3 class="pet__title">Woody</h3>
+                      <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+                    </div>
+                  </article>
                 </div>
-              </article>
+              </div>
             </div>
-            <div class="pet-slider__controls"><a class="pet-slider__button" href="#"><img src="./img/icons/arr-l.svg" alt="Left"></a><a class="pet-slider__button" href="#"><img src="./img/icons/arr-r.svg" alt="Right"></a></div>
+            <div class="pet-slider__controls">
+              <button class="circle-button" id="pet-slider__left"><img src="./img/icons/arr-l.svg" alt="left"></button>
+              <button class="circle-button" id="pet-slider__right"><img src="./img/icons/arr-r.svg" alt="right"></button>
+            </div>
           </div>
         </div>
         <div class="our-friends__cta"><a class="button" href="pets.html">Get to know the rest</a></div>
@@ -170,5 +228,26 @@
         <div class="footer__image"><img src="./img/footer-puppy.png" alt="Footer puppy"></div>
       </div>
     </footer>
+    <section class="popup" id="popup">
+      <div class="popup__backdrop"></div>
+      <div class="popup__window">
+        <div class="popup__close">
+          <button class="circle-button"><img src="./img/icons/close.svg" alt="close"></button>
+        </div>
+        <div class="popup__image"><img src="./img/pets-modal/jennifer.png" alt="Jennifer"></div>
+        <div class="popup__content">
+          <h2 class="popup__title">Jennifer</h2>
+          <h3 class="popup__subtitle"><span class="popup__type">Dog</span> - <span class="popup__breed">Labrador</span></h3>
+          <p class="popup__description">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</p>
+          <ul class="popup__list">
+            <li class="popup__item"><b>Age:</b> 2 months</li>
+            <li class="popup__item"><b>Inoculations:</b> none</li>
+            <li class="popup__item"><b>Diseases:</b> none</li>
+            <li class="popup__item"><b>Parasites:</b> none</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script src="js/main.js" type="module"> </script>
   </body>
 </html>

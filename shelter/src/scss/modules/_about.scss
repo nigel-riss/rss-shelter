@@ -27,7 +27,7 @@
   margin-bottom: 4.2rem;
   padding: 0 1.5rem;
   
-  @include atTablet760 {
+  @include atTablet768 {
     // box model
     margin-bottom: 8rem;
     padding: 0 17rem;
@@ -54,7 +54,7 @@
   // typography
   font-size: 0;
 
-  @include atTablet760 {
+  @include atTablet768 {
     // box model
     width: 30rem;
   }

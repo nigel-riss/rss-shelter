@@ -9,7 +9,7 @@
     url(./img/noise-transparent@2x.png),
     radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
 
-  @include atTablet760 {
+  @include atTablet768 {
     // box model
     padding: 0 10rem;
     padding-top: 15rem;
@@ -45,7 +45,7 @@
   color: var(--lightXL);
   text-align: center;
 
-  @include atTablet760 {
+  @include atTablet768 {
     // box model
     margin-bottom: 10rem;
     max-width: 72rem;
@@ -74,7 +74,7 @@
   letter-spacing: 0.06em;
   line-height: 1.3;
 
-  @include atTablet760 {
+  @include atTablet768 {
     // typography
     font-size: 4.4rem;
     letter-spacing: normal;
@@ -112,7 +112,7 @@
   // typography
   font-size: 0;
 
-  @include atTablet760 {
+  @include atTablet768 {
     // box model
     margin-right: -7rem;
     padding-left: 0;
