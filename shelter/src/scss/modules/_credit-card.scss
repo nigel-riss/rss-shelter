@@ -1,0 +1,53 @@
+.credit-card {
+  // box model
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+
+  // border
+  border-radius: 0.9rem;
+
+  // typography
+  text-decoration: none;
+
+  // visual
+  background-color: var(--primary);
+  transition: all 0.25s ease-out;
+}
+
+.credit-card:hover {
+  // visual
+  background-color: var(--primaryLight);
+}
+
+.credit-card__icon {
+  // box model
+  height: 2.3rem;
+  width: 3rem;
+  margin-right: 1.5rem;
+
+  // typography
+  font-size: 0;
+}
+
+.credit-card__icon img {
+  // box model
+  height: 100%;
+}
+
+.credit-card__number {
+  // typography
+  color: var(--darkL);
+  font-family: var(--titleFont);
+  font-size: 1.5rem;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  line-height: 1.7rem;
+  white-space: nowrap;
+
+  @include atTablet768 {
+    // typography
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+}

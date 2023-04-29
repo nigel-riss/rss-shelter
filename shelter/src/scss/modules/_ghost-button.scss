@@ -1,0 +1,38 @@
+.ghost-button {
+  // box model
+  display: flex;
+  justify-content: center;
+  padding: 1.3rem 4.5rem;
+
+  // border
+  border: 2px solid var(--primary);
+  border-radius: 10rem;
+
+  // typography
+  color: var(--dark3XL);
+  font-family: var(--titleFont);
+  font-size: 1.7rem;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+  text-decoration: none;
+
+  // visual
+  background-color: transparent;
+  transition: all 0.25s ease-out;
+}
+
+.ghost-button:hover {
+  // border
+  border-color: var(--primaryLight);
+
+  // visual
+  background-color: var(--primaryLight);
+}
+
+.ghost-button:active {
+  // border
+  border-color: var(--primary);
+
+  // visual
+  background-color: var(--primary);
+}

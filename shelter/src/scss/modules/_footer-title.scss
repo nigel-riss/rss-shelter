@@ -1,0 +1,23 @@
+.footer-title {
+  // box model
+  margin: 0;
+  padding: 0 1.5rem;
+
+  // typography
+  color: var(--lightXL);
+  font-family: var(--titleFont);
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+  text-align: center;
+
+  @include atTablet768 {
+    // box model
+    padding: 0;
+
+    // typography
+    font-size: 3.5rem;
+    text-align: left;
+  }
+}

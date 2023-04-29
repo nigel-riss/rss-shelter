@@ -1,0 +1,39 @@
+.our-friends {
+  // box model
+  padding: 4.2rem 1rem;
+
+  // visual
+  background-color: var(--lightL);
+
+  @include section;
+}
+
+.our-friends__header {
+  // box model
+  margin-bottom: 4.2rem;
+
+  @include atTablet768 {
+    // box model
+    margin-bottom: 6rem;
+
+    // typography
+    text-align: center;
+  }
+}
+
+
+.our-friends__content {
+  // box model
+  margin-bottom: 4.2rem;
+
+  @include atTablet768 {
+    // box model
+    margin-bottom: 6rem;
+  }
+}
+
+.our-friends__cta {
+  // box model
+  display: flex;
+  justify-content: center;
+}

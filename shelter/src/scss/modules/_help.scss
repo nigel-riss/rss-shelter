@@ -1,0 +1,33 @@
+.help {
+  // box model
+  padding: 4.2rem 1.5rem;
+
+  @include section;
+}
+
+.help__header {
+  // box model
+  margin-bottom: 4.2rem;
+
+  @include atTablet768 {
+    // box model
+    margin-bottom: 6rem;
+
+    // typography
+    text-align: center;
+  }
+}
+
+.help__content {
+  @include atTablet768 {
+    // box model
+    padding: 0 6.9rem;
+  }
+
+  @include atDesktopS {
+    // box model
+    margin: 0 auto;
+    padding: 0;
+    width: 103rem;
+  }
+}

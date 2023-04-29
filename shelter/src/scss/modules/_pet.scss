@@ -1,0 +1,74 @@
+.pet {
+  // box model
+  width: 27rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  // border
+  border-radius: 0.9rem;
+
+  // visual
+  background-color: var(--lightS);
+  overflow: hidden;
+  transition: all 0.25s ease-out;
+}
+
+.pet:hover {
+  // visual
+  background-color: var(--lightXL);
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  cursor: pointer;
+}
+
+.pet:hover .ghost-button {
+  // border
+  border-color: var(--primaryLight);
+
+  // visual
+  background-color: var(--primaryLight);
+}
+
+.pet * {
+  pointer-events: none;
+}
+
+.pet__image {
+  // box model
+  height: 27rem;
+
+  // typography
+  font-size: 0;
+}
+
+.pet__image img {
+  // box model
+  height: 100%;
+  width: 100%;
+
+  // image
+  object-position: center;
+  object-fit: cover;
+}
+
+.pet__caption {
+  // box model
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+}
+
+.pet__title {
+  // box model
+  margin: 0;
+  margin-bottom: 3rem;
+
+  // typography
+  color: var(--darkL);
+  font-family: var(--titleFont);
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+  text-align: center;
+}

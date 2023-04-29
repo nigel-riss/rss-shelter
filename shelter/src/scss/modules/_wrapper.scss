@@ -1,0 +1,10 @@
+.wrapper {
+  // box model
+  margin: 0 auto;
+  // max-width: 60rem;
+
+  @include atDesktopS {
+    // box model
+    max-width: var(--dWidth);
+  }
+}

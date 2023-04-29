@@ -1,0 +1,53 @@
+.contact {
+  // box model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // typography
+  text-decoration: none;
+
+  // visual
+  transition: all 0.25s ease-out;
+
+  @include atTablet768 {
+    // box model
+    justify-content: flex-start;
+  }
+}
+
+.contact:hover {
+  // visual
+  opacity: 0.5;
+}
+
+.contact--location {
+  // box model
+  justify-content: flex-start;
+}
+
+.contact__icon {
+  // box model
+  height: 3.2rem;
+  margin-right: 2rem;
+
+  // typography
+  font-size: 0;
+}
+
+.contact__icon img {
+  // box model
+  height: 100%;
+}
+
+.contact__text {
+  // box model
+  margin: 0;
+
+  // typography
+  color: var(--primary);
+  font-family: var(--titleFont);
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+}

@@ -1,0 +1,44 @@
+.pagination {
+  // box model
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+
+  // list
+  list-style: none;
+
+  @include atTablet768 {
+    // box model
+    gap: 2rem;
+  }
+}
+
+.pagination__item {
+  // typography
+  font-family: var(--titleFont);
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.pagination__current {
+  // box model
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5.2rem;
+  width: 5.2rem;
+
+  // typography
+  color: var(--dark3XL);
+
+  // border
+  border-radius: 50%;
+  border: 2px solid transparent;
+
+  // visual
+  background-color: var(--primary);
+}

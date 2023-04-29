@@ -1,0 +1,121 @@
+.donations {
+  // box model
+  padding: 4.2rem 1rem;
+
+  // visual
+  background-color: var(--lightL);
+
+  @include section;
+}
+
+.donations__wrapper {
+  @include atDesktopS {
+    // box model
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 91.5rem;
+    margin: 0 auto;
+  }
+}
+
+.donations__content {
+  // box model
+  margin: 0 auto;
+  margin-bottom: 4.2rem;
+  padding: 0 1rem;
+
+  @include atTablet768 {
+    // box model
+    margin-bottom: 6rem;
+    padding: 0 19.4rem;
+  }
+
+  @include atDesktopS {
+    // box model
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+
+.donations__title {
+  // box model
+  margin: 2rem 0;
+
+  // typography
+  color: var(--darkL);
+  font-family: var(--titleFont);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+
+  @include atTablet768 {
+    // box model
+    text-align: left;
+    // typography
+
+    letter-spacing: 0.06em;
+    line-height: 1.1;
+  }
+}
+
+.donations__card {
+  // box model
+  display: flex;
+  justify-content: center;
+
+  @include atTablet768 {
+    justify-content: flex-start;
+  }
+}
+
+.donations__legal-info {
+  // box model
+  margin: 0;
+  margin-top: 2rem;
+
+  // typography
+  color: var(--darkM);
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: justify;
+
+  @include atTablet768 {
+    // typography
+    text-align: left;
+  }
+}
+
+.donations__image {
+  // box model
+  margin: 0 auto;
+  max-width: 50.5rem;
+  padding: 0 2rem;
+
+  // typography
+  font-size: 0;
+
+  @include atTablet768 {
+    // box model
+    padding: 0;
+  }
+
+  @include atDesktopS {
+    // box model
+    flex-basis: 50.5;
+    flex-shrink: 0;
+    margin: 0;
+  }
+}
+
+.donations__image img {
+  // box model
+  max-width: 100%;
+}

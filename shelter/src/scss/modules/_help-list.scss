@@ -1,0 +1,84 @@
+.help-list {
+  // box model
+  margin: 0;
+  padding: 0;
+  display: grid;
+  justify-content: space-between;
+  row-gap: 3rem;
+  grid-template-columns: repeat(auto-fill, 13rem);
+
+  // list
+  list-style: none;
+
+  @include atTablet768 {
+    // box model
+    grid-template-columns: repeat(auto-fill, 17rem);
+    column-gap: 6rem;
+    row-gap: 5.5rem;
+  }
+  
+  @include atDesktopS {
+    // box model
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 12rem;
+  }
+}
+
+.help-list__item {
+  // box model
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  @include atDesktopS {
+    // box model
+    flex-basis: auto;
+  }
+}
+
+.help-list__icon {
+  // box model
+  width: 5rem;
+  height: 5rem;
+  margin: 0;
+  margin-bottom: 2rem;
+
+  // typography
+  font-size: 0;
+
+  @include atTablet768 {
+    // box model
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.help-list__icon img {
+  // box model
+  width: 100%;
+}
+
+.help-list__title {
+  // box model
+  margin: 0;
+
+  // typography
+  font-family: var(--titleFont);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  text-align: center;
+  white-space: nowrap;
+
+  @include atTablet768 {
+    // typography
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+}

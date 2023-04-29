@@ -1,0 +1,79 @@
+html {
+  // positioning
+  position: relative;
+
+  // box model
+  height: 100%;
+
+  // typography
+  font-family: var(--mainFont);
+  font-size: 10px;
+
+  // visual
+  background-color: var(--lightXL);
+  // overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  @include atDesktopS {
+    // typography
+    font-size: 10px;
+  }
+}
+
+body {
+  // positioning
+  position: relative;
+
+  // box model
+  box-sizing: border-box;
+
+  // visual
+  // overflow-x: hidden;
+  // text-rendering: optimizeLegibility;
+  // text-rendering: optimizeSpeed;
+  text-rendering: geometricPrecision;
+}
+
+*,
+*::before,
+*::after {
+  // box model
+  box-sizing: inherit;
+}
+
+// .centered {
+//   // typography
+//   text-align: center;
+// }
+
+// .nowrap {
+//   // typography
+//   white-space: nowrap;
+// }
+
+// .mobile-only {
+//   @include atDesktopS {
+//     // box model
+//     display: none !important;
+//   }
+// }
+
+// .desktop-only {
+//   // box model
+//   display: none !important;
+
+//   @include atDesktopS {
+//     // box model
+//     display: inherit !important;
+//   }
+// }
+
+// .overflow-hidden {
+//   // visual
+//   overflow: hidden;
+// }
+
+// a {
+//   // typography
+//   // color: $lightGreen;
+// }

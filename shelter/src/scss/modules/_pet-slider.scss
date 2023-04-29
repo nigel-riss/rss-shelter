@@ -1,0 +1,142 @@
+.pet-slider {
+  // positioning
+  position: relative;
+}
+
+.pet-slider__content {
+  // positioning
+  position: relative;
+  z-index: 1;
+
+  // box model
+  width: 28rem;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto;
+  
+  // visual
+  overflow: hidden;
+
+  @include atTablet768 {
+    // box model
+    width: 59rem;
+  }
+
+  @include atDesktopS {
+    // box model
+    width: 100rem;
+  }
+}
+
+.pet-slider__slides {
+  // positioning
+  position: relative;
+  left: -30.5rem;
+  
+  // box model
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 2rem;
+
+  // visual
+  transition: all 0.5s ease-out;
+
+  @include atTablet768 {
+    // positioning
+    left: -65.5rem;
+
+    // box model
+    gap: 4rem;
+    padding: 0 4rem;
+  }
+
+  @include atDesktopS {
+    // positioning
+    left: -116.5rem;
+
+    // box model
+    gap: 9rem;
+    padding: 0 9rem;
+  }
+}
+
+.pet-slider__slides--not-animated {
+  // visual
+  transition: none !important;
+}
+
+.pet-slider__slide {
+  // box model
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  // border: 2px solid blue;
+
+  @include atTablet768 {
+    // box model
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  @include atDesktopS {
+    // box model
+    gap: 9rem;
+  }
+}
+
+.pet-slider__slide .pet {
+  // box model
+  display: none;
+
+  &:first-of-type {
+    // box model
+    display: block;
+  }
+
+  @include atTablet768 {
+    &:nth-last-of-type(2) {
+      // box model
+      display: block;
+    }
+  }
+
+  @include atDesktopS {
+    // box model
+    display: block;
+  }
+}
+
+.pet-slider__controls {
+  // box model
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 5.8rem;
+  padding-bottom: 0;
+  
+  @include atTablet {
+    // positioning
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+
+    // box model
+    padding: 0 3rem;
+    
+    // visual
+    pointer-events: none;
+  }
+
+  @include atDesktopS {
+    // box model
+    padding: 0;
+  }
+}
+
+.pet-slider__controls button {
+  // visual
+  pointer-events: all;
+}

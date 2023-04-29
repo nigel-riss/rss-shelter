@@ -1,0 +1,19 @@
+.section-title {
+  // box model
+  margin: 0;
+
+  // typography
+  color: var(--darkL);
+  font-family: var(--titleFont);
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+  text-align: center;
+
+  @include atTablet768 {
+    // typography
+    font-size: 3.5rem;
+    text-align: inherit;
+  }
+}

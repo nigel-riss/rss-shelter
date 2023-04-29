@@ -1,0 +1,25 @@
+.section-text {
+  // box model
+  margin: 0;
+  margin-bottom: 2.2rem;
+  
+  // typography
+  font-size: 1.5rem;
+  line-height: 1.6;
+  text-align: justify;
+  
+  @include atTablet768 {
+    // box model
+    margin-bottom: 2.5rem;
+
+    // typography
+    text-align: inherit;
+  }
+}
+
+.section-text:last-of-type {
+  @include atDesktopS {
+    // box model
+    margin-bottom: 0;
+  }
+}

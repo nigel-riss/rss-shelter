@@ -1,0 +1,21 @@
+{
+  "name": "nigel-riss-JSFE2023Q1",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Site for shelter for pets in Boston",
+  "main": "index.js",
+  "repository": "git@github.com:rolling-scopes-school/nigel-riss-JSFE2023Q1.git",
+  "author": "Yuriy Kurenkov <mr.kurenkov@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.0",
+    "gulp": "^4.0.2",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.59.3"
+  }
+}

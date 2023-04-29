@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"><link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png?v=shelter1">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png?v=shelter1">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png?v=shelter1">
+<link rel="manifest" href="./favicon/site.webmanifest?v=shelter1">
+<link rel="mask-icon" href="./favicon/safari-pinned-tab.svg?v=shelter1" color="#5bbad5">
+<link rel="shortcut icon" href="./favicon/favicon.ico?v=shelter1">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="msapplication-config" content="./favicon/browserconfig.xml?v=shelter1">
+<meta name="theme-color" content="#ffffff">
+    <title>Shelter — Pets</title>
+  </head>
+  <body> 
+    <header class="header header--inner">
+      <div class="header__wrapper wrapper">
+        <div class="header__logo"><a class="logo logo--inner" href="index.html">
+            <p class="logo__title">Cozy House </p>
+            <p class="logo__subtitle">Shelter for pets in Boston</p></a></div>
+        <nav class="header-nav" id="header-nav">
+          <div class="header-nav__backdrop"></div>
+          <div class="header-nav__menu">
+            <ul class="main-menu main-menu--inner" id="main-menu">
+              <li class="main-menu__item"><a class="main-menu__link" href="index.html">About the shelter</a></li>
+              <li class="main-menu__item main-menu__item--current"> <span class="main-menu__link">Our pets </span></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="index.html#help">Help the shelter</a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="#contacts">Contacts</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="header__menu-button">
+          <button class="menu-button menu-button--inner" id="menu-button">
+            <div class="menu-button__middle">🍔</div>
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="all-friends" id="all-friends">
+      <div class="all-friends__wrapper wrapper">
+        <header class="all-friends__header">
+          <h1 class="section-title">Our friends who <br>are looking for a house</h1>
+        </header>
+        <div class="all-friends__content"> 
+          <article class="pet" data-name="katrine">
+            <div class="pet__image"><img src="./img/pets/katrine.png" alt="Katrine"></div>
+            <div class="pet__caption">
+              <h3 class="pet__title">Katrine</h3>
+              <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <article class="pet" data-name="jennifer">
+            <div class="pet__image"><img src="./img/pets/jennifer.png" alt="Jennifer"></div>
+            <div class="pet__caption">
+              <h3 class="pet__title">Jennifer</h3>
+              <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <article class="pet" data-name="woody">
+            <div class="pet__image"><img src="./img/pets/woody.png" alt="Woody"></div>
+            <div class="pet__caption">
+              <h3 class="pet__title">Woody</h3>
+              <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <article class="pet" data-name="sophia">
+            <div class="pet__image"><img src="./img/pets/sophia.png" alt="Sophia"></div>
+            <div class="pet__caption">
+              <h3 class="pet__title">Sophia</h3>
+              <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <article class="pet" data-name="timmy">
+            <div class="pet__image"><img src="./img/pets/timmy.png" alt="Timmy"></div>
+            <div class="pet__caption">
+              <h3 class="pet__title">Timmy</h3>
+              <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <article class="pet" data-name="charly">
+            <div class="pet__image"><img src="./img/pets/charly.png" alt="Charly"></div>
+            <div class="pet__caption">
+              <h3 class="pet__title">Charly</h3>
+              <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <article class="pet" data-name="scarlett">
+            <div class="pet__image"><img src="./img/pets/scarlett.png" alt="Scarlett"></div>
+            <div class="pet__caption">
+              <h3 class="pet__title">Scarlett</h3>
+              <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <article class="pet" data-name="freddie">
+            <div class="pet__image"><img src="./img/pets/freddie.png" alt="Freddie"></div>
+            <div class="pet__caption">
+              <h3 class="pet__title">Freddie</h3>
+              <div class="pet__more"><a class="ghost-button" href="#">Learn more</a></div>
+            </div>
+          </article>
+        </div>
+        <div class="all-friends__pagination">
+          <ul class="pagination">
+            <li class="pagination__item">
+              <button class="circle-button" disabled>&lt;&lt;</button>
+            </li>
+            <li class="pagination__item">
+              <button class="circle-button" disabled>&lt;</button>
+            </li>
+            <li class="pagination__item"><span class="pagination__current">1</span></li>
+            <li class="pagination__item">
+              <button class="circle-button">&gt;</button>
+            </li>
+            <li class="pagination__item">
+              <button class="circle-button">&gt;&gt;</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer class="footer" id="contacts">
+      <div class="footer__wrapper wrapper">
+        <div class="footer__content">
+          <div class="footer__block">
+            <h3 class="footer-title">For questions and suggestions</h3><a class="contact" href="mailto:email@shelter.com">
+              <div class="contact__icon"><img src="./img/icons/icon-email.svg" alt="email"></div>
+              <p class="contact__text">email@shelter.com</p></a><a class="contact" href="tel:+136745677554">
+              <div class="contact__icon"><img src="./img/icons/icon-phone.svg" alt="phone"></div>
+              <p class="contact__text">+13 674 567 75 54</p></a>
+          </div>
+          <div class="footer__block">
+            <h3 class="footer-title">We are waiting for your visit</h3><a class="contact contact--location" href="https://www.google.com/maps/place/@42.3276029,-71.0945625,17z" target="_blank">
+              <div class="contact__icon"><img src="./img/icons/icon-marker.svg" alt="location marker"></div>
+              <p class="contact__text">1 Central Street, Boston (entrance from the store)</p></a><a class="contact contact--location" href="https://www.google.com/maps/@51.4723291,-0.2103449,11z" target="_blank">
+              <div class="contact__icon"><img src="./img/icons/icon-marker.svg" alt="location marker"></div>
+              <p class="contact__text">18 South Park, London</p></a>
+          </div>
+        </div>
+        <div class="footer__image"><img src="./img/footer-puppy.png" alt="Footer puppy"></div>
+      </div>
+    </footer>
+    <section class="popup" id="popup">
+      <div class="popup__backdrop"></div>
+      <div class="popup__window">
+        <div class="popup__close">
+          <button class="circle-button"><img src="./img/icons/close.svg" alt="close"></button>
+        </div>
+        <div class="popup__image"><img src="./img/pets-modal/jennifer.png" alt="Jennifer"></div>
+        <div class="popup__content">
+          <h2 class="popup__title">Jennifer</h2>
+          <h3 class="popup__subtitle"><span class="popup__type">Dog</span> - <span class="popup__breed">Labrador</span></h3>
+          <p class="popup__description">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</p>
+          <ul class="popup__list">
+            <li class="popup__item"><b>Age:</b> 2 months</li>
+            <li class="popup__item"><b>Inoculations:</b> none</li>
+            <li class="popup__item"><b>Diseases:</b> none</li>
+            <li class="popup__item"><b>Parasites:</b> none</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script src="js/pets.js" type="module"> </script>
+  </body>
+</html>
